@@ -1,0 +1,32 @@
+{
+  "_doc": "Corrections from the EN/FR verification (Poképédia, Bulbapedia). fr_absent: never printed in French.",
+  "fr_absent": ["gym1-63", "gym2-64", "gym2-33", "lc-87", "lc-60", "pl4-46", "pl4-72", "pl4-SH11", "pl4-28", "pl4-47"],
+  "fr_force": {"swshp-SWSH013": {"variants": ["cosmos"]}},
+  "labels": {"en:swshp-SWSH013:holo": "Holo paillettes"},
+  "variants": [
+    {"id": "g1-14", "lang": "en", "key": "tru", "label": "Holo tampon Toys \"R\" Us"},
+    {"id": "g1-14", "lang": "en", "key": "game20", "label": "Holo tampon 20e anniversaire"},
+    {"id": "swsh12-022", "lang": "both", "key": "deck", "label": "Non holo (deck)"}
+  ],
+  "booster": {
+    "g1-14:tru": {"en": "Promo Toys \"R\" Us Canada (20e anniversaire, 2016)"},
+    "g1-14:game20": {"en": "Promo des magasins GAME au Royaume-Uni (20e anniversaire, 2016)"},
+    "swsh12-022:deck": {"fr": "Deck Combat Deluxe Feunard-ex (et probablement le coffret Stratégies et Combats Tempête Argentée)", "en": "Silver Tempest Build & Battle Box · Ninetales ex Deluxe Battle Deck"},
+    "swshp-SWSH013:cosmos": {"fr": "Tripack EB01 Ponyta de Galar (blister de 3 boosters)", "en": "Sword & Shield Three Pack Blister (Galarian Ponyta, 2020)"},
+    "swshp-SWSH013:holo": {"en": "Mini-boosters des céréales General Mills 25e anniversaire (États-Unis, 2021)"},
+    "swshp-SWSH111:holo": {"fr": "Coffret Galopa de Galar-V (2021)", "en": "Galarian Rapidash V Box (2021)"},
+    "swshp-SWSH111:prp": {"fr": "Pack Récompense Play! Pokémon, séries 1 et 2", "en": "Play! Pokémon Prize Pack Series One & Two"},
+    "swshp-SWSH270:logo": {"fr": "Coffret Stratégies et Combats Tempête Argentée (avant-première)", "en": "Silver Tempest Build & Battle Box"},
+    "swshp-SWSH270:staff": {"fr": "Réservée au staff des avant-premières Tempête Argentée", "en": "Réservée au staff des avant-premières Silver Tempest"},
+    "basep-51:normal": {"en": "Encart du magazine Nintendo Power (novembre 2002)"},
+    "basep-51:pcny": {"en": "Pokémon Center New York (novembre 2002)"}
+  },
+  "cards": [
+    {"id": "en:classic-ponyta-004", "g": "classic-ponyta", "poke": "ponyta", "gt": "Ponyta · Pokémon TCG Classic", "gs": "Deck Dracaufeu & Ho-Oh ex · illustration d'Astres Radieux", "go": "2023-11-03-0004",
+     "l": "en", "n": "Ponyta", "en": "Ponyta", "s": "Pokémon TCG Classic", "num": "004/034", "r": "—", "v": "Holo", "b": "Coffret Pokémon TCG Classic (deck Dracaufeu & Ho-Oh ex)", "y": 2023,
+     "img": "https://assets.tcgdex.net/en/swsh/swsh10/021", "note": "Image : version Astres Radieux, même illustration."},
+    {"id": "en:classic-rapidash-005", "g": "classic-rapidash", "poke": "rapidash", "gt": "Galopa · Pokémon TCG Classic", "gs": "Deck Dracaufeu & Ho-Oh ex · illustration d'Astres Radieux", "go": "2023-11-03-0005",
+     "l": "en", "n": "Rapidash", "en": "Rapidash", "s": "Pokémon TCG Classic", "num": "005/034", "r": "—", "v": "Holo", "b": "Coffret Pokémon TCG Classic (deck Dracaufeu & Ho-Oh ex)", "y": 2023,
+     "img": "https://assets.tcgdex.net/en/swsh/swsh10/022", "note": "Image : version Astres Radieux, même illustration."}
+  ]
+}
