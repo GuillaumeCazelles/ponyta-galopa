@@ -1,32 +1,436 @@
 {
-  "_doc": "Corrections from the EN/FR verification (Poképédia, Bulbapedia). fr_absent: never printed in French.",
-  "fr_absent": ["gym1-63", "gym2-64", "gym2-33", "lc-87", "lc-60", "pl4-46", "pl4-72", "pl4-SH11", "pl4-28", "pl4-47"],
-  "fr_force": {"swshp-SWSH013": {"variants": ["cosmos"]}},
-  "labels": {"en:swshp-SWSH013:holo": "Holo paillettes"},
-  "variants": [
-    {"id": "g1-14", "lang": "en", "key": "tru", "label": "Holo tampon Toys \"R\" Us"},
-    {"id": "g1-14", "lang": "en", "key": "game20", "label": "Holo tampon 20e anniversaire"},
-    {"id": "swsh12-022", "lang": "both", "key": "deck", "label": "Non holo (deck)"}
-  ],
-  "booster": {
-    "g1-14:tru": {"en": "Promo Toys \"R\" Us Canada (20e anniversaire, 2016)"},
-    "g1-14:game20": {"en": "Promo des magasins GAME au Royaume-Uni (20e anniversaire, 2016)"},
-    "swsh12-022:deck": {"fr": "Deck Combat Deluxe Feunard-ex (et probablement le coffret Stratégies et Combats Tempête Argentée)", "en": "Silver Tempest Build & Battle Box · Ninetales ex Deluxe Battle Deck"},
-    "swshp-SWSH013:cosmos": {"fr": "Tripack EB01 Ponyta de Galar (blister de 3 boosters)", "en": "Sword & Shield Three Pack Blister (Galarian Ponyta, 2020)"},
-    "swshp-SWSH013:holo": {"en": "Mini-boosters des céréales General Mills 25e anniversaire (États-Unis, 2021)"},
-    "swshp-SWSH111:holo": {"fr": "Coffret Galopa de Galar-V (2021)", "en": "Galarian Rapidash V Box (2021)"},
-    "swshp-SWSH111:prp": {"fr": "Pack Récompense Play! Pokémon, séries 1 et 2", "en": "Play! Pokémon Prize Pack Series One & Two"},
-    "swshp-SWSH270:logo": {"fr": "Coffret Stratégies et Combats Tempête Argentée (avant-première)", "en": "Silver Tempest Build & Battle Box"},
-    "swshp-SWSH270:staff": {"fr": "Réservée au staff des avant-premières Tempête Argentée", "en": "Réservée au staff des avant-premières Silver Tempest"},
-    "basep-51:normal": {"en": "Encart du magazine Nintendo Power (novembre 2002)"},
-    "basep-51:pcny": {"en": "Pokémon Center New York (novembre 2002)"}
+ "_doc": "Corrections from the EN/FR verification (Poképédia, Bulbapedia). fr_absent: never printed in French.",
+ "fr_absent": [
+  "base4-13",
+  "base4-99",
+  "bw11-20",
+  "bw11-21",
+  "gym1-63",
+  "gym1-65",
+  "gym1-73",
+  "gym2-21",
+  "gym2-3",
+  "gym2-33",
+  "gym2-37",
+  "gym2-64",
+  "gym2-66",
+  "lc-17",
+  "lc-60",
+  "lc-87",
+  "lc-98",
+  "pl4-28",
+  "pl4-46",
+  "pl4-47",
+  "pl4-72",
+  "pl4-SH11",
+  "ru1-3"
+ ],
+ "fr_force": {
+  "swshp-SWSH013": {
+   "variants": [
+    "cosmos"
+   ]
   },
-  "cards": [
-    {"id": "en:classic-ponyta-004", "g": "classic-ponyta", "poke": "ponyta", "gt": "Ponyta · Pokémon TCG Classic", "gs": "Deck Dracaufeu & Ho-Oh ex · illustration d'Astres Radieux", "go": "2023-11-03-0004",
-     "l": "en", "n": "Ponyta", "en": "Ponyta", "s": "Pokémon TCG Classic", "num": "004/034", "r": "—", "v": "Holo", "b": "Coffret Pokémon TCG Classic (deck Dracaufeu & Ho-Oh ex)", "y": 2023,
-     "img": "https://assets.tcgdex.net/en/swsh/swsh10/021", "note": "Image : version Astres Radieux, même illustration."},
-    {"id": "en:classic-rapidash-005", "g": "classic-rapidash", "poke": "rapidash", "gt": "Galopa · Pokémon TCG Classic", "gs": "Deck Dracaufeu & Ho-Oh ex · illustration d'Astres Radieux", "go": "2023-11-03-0005",
-     "l": "en", "n": "Rapidash", "en": "Rapidash", "s": "Pokémon TCG Classic", "num": "005/034", "r": "—", "v": "Holo", "b": "Coffret Pokémon TCG Classic (deck Dracaufeu & Ho-Oh ex)", "y": 2023,
-     "img": "https://assets.tcgdex.net/en/swsh/swsh10/022", "note": "Image : version Astres Radieux, même illustration."}
-  ]
+  "mfb-11": {
+   "set": "Mon premier combat"
+  },
+  "mfb-12": {
+   "set": "Mon premier combat"
+  }
+ },
+ "labels": {
+  "en:swshp-SWSH013:holo": "Holo paillettes",
+  "fr:xy12-15:normal": "Holo",
+  "fr:bw6-19:normal": "Holo",
+  "fr:sm9-111:normal": "Holo",
+  "fr:sm12-145:normal": "Holo",
+  "fr:smp-SM128:normal": "Non holo (kit, rond n°17)",
+  "fr:30th-009:normal": "Holo (logo 30 ans)",
+  "fr:30th-010:normal": "Holo (logo 30 ans)",
+  "fr:sm2-132:holo": "Holo full art",
+  "fr:sm8-205:holo": "Holo full art",
+  "fr:sm2-150:holo": "Holo arc-en-ciel",
+  "fr:sm8-225:holo": "Holo arc-en-ciel"
+ },
+ "variants": [
+  {
+   "id": "g1-14",
+   "lang": "en",
+   "key": "tru",
+   "label": "Holo tampon Toys \"R\" Us"
+  },
+  {
+   "id": "g1-14",
+   "lang": "en",
+   "key": "game20",
+   "label": "Holo tampon 20e anniversaire"
+  },
+  {
+   "id": "swsh12-022",
+   "lang": "both",
+   "key": "deck",
+   "label": "Non holo (deck)"
+  },
+  {
+   "id": "col1-17",
+   "lang": "fr",
+   "key": "deck",
+   "label": "Non holo (deck)"
+  },
+  {
+   "id": "smp-SM128",
+   "lang": "fr",
+   "key": "kit30",
+   "label": "Holo (kit, rond n°30)"
+  },
+  {
+   "id": "sm2-21",
+   "lang": "fr",
+   "key": "tru",
+   "label": "Holo cosmos tampon Toys\"R\"Us"
+  },
+  {
+   "id": "sm2-21",
+   "lang": "fr",
+   "key": "kit14",
+   "label": "Normale (kit, rond n°14)"
+  },
+  {
+   "id": "sm2-21",
+   "lang": "fr",
+   "key": "kit29",
+   "label": "Normale (kit, rond n°29)"
+  },
+  {
+   "id": "swsh12-033",
+   "lang": "fr",
+   "key": "prp",
+   "label": "Tampon Play! Pokémon"
+  },
+  {
+   "id": "swsh12-034",
+   "lang": "fr",
+   "key": "prp",
+   "label": "Tampon Play! Pokémon"
+  },
+  {
+   "id": "swsh8-29",
+   "lang": "fr",
+   "key": "ba13",
+   "label": "Académie de Combat n°13",
+   "u": 1
+  },
+  {
+   "id": "swsh8-29",
+   "lang": "fr",
+   "key": "ba18",
+   "label": "Académie de Combat n°18",
+   "u": 1
+  },
+  {
+   "id": "swsh8-29",
+   "lang": "fr",
+   "key": "ba31",
+   "label": "Académie de Combat n°31",
+   "u": 1
+  },
+  {
+   "id": "swsh8-30",
+   "lang": "fr",
+   "key": "ba7",
+   "label": "Académie de Combat n°7",
+   "u": 1
+  },
+  {
+   "id": "swsh8-30",
+   "lang": "fr",
+   "key": "ba23",
+   "label": "Académie de Combat n°23",
+   "u": 1
+  },
+  {
+   "id": "swsh12-033",
+   "lang": "fr",
+   "key": "snow",
+   "label": "Holo tampon flocon"
+  }
+ ],
+ "booster": {
+  "g1-14:tru": {
+   "en": "Promo Toys \"R\" Us Canada (20e anniversaire, 2016)"
+  },
+  "g1-14:game20": {
+   "en": "Promo des magasins GAME au Royaume-Uni (20e anniversaire, 2016)"
+  },
+  "swsh12-022:deck": {
+   "fr": "Deck Combat Deluxe Feunard-ex (et probablement le coffret Stratégies et Combats Tempête Argentée)",
+   "en": "Silver Tempest Build & Battle Box · Ninetales ex Deluxe Battle Deck"
+  },
+  "swshp-SWSH013:cosmos": {
+   "fr": "Tripack EB01 Ponyta de Galar (blister de 3 boosters)",
+   "en": "Sword & Shield Three Pack Blister (Galarian Ponyta, 2020)"
+  },
+  "swshp-SWSH013:holo": {
+   "en": "Mini-boosters des céréales General Mills 25e anniversaire (États-Unis, 2021)"
+  },
+  "swshp-SWSH111:holo": {
+   "fr": "Coffret Galopa de Galar-V (2021)",
+   "en": "Galarian Rapidash V Box (2021)"
+  },
+  "swshp-SWSH111:prp": {
+   "fr": "Pack Récompense Play! Pokémon, séries 1 et 2",
+   "en": "Play! Pokémon Prize Pack Series One & Two"
+  },
+  "swshp-SWSH270:logo": {
+   "fr": "Coffret Stratégies et Combats Tempête Argentée (avant-première)",
+   "en": "Silver Tempest Build & Battle Box"
+  },
+  "swshp-SWSH270:staff": {
+   "fr": "Réservée au staff des avant-premières Tempête Argentée",
+   "en": "Réservée au staff des avant-premières Silver Tempest"
+  },
+  "basep-51:normal": {
+   "en": "Encart du magazine Nintendo Power (novembre 2002)"
+  },
+  "basep-51:pcny": {
+   "en": "Pokémon Center New York (novembre 2002)"
+  },
+  "base1-12": {
+   "fr": "Boosters Set de Base · Deck à thème Fournaise"
+  },
+  "base1-68": {
+   "fr": "Boosters Set de Base · Decks à thème Fournaise et Verrouillage"
+  },
+  "neo4-91": {
+   "fr": "Boosters Neo Destiny · Deck à thème Obscurité"
+  },
+  "ecard2-25": {
+   "fr": "Boosters Aquapolis · Deck à thème Abysse"
+  },
+  "ecard2-116": {
+   "fr": "Boosters Aquapolis · Deck à thème Abysse"
+  },
+  "ex9-38": {
+   "fr": "Boosters EX Émeraude · Deck à thème Incendie"
+  },
+  "ex9-72": {
+   "fr": "Boosters EX Émeraude · Deck à thème Incendie"
+  },
+  "ex15-70": {
+   "fr": "Boosters EX Île des Dragons · Deck à thème Flamboiement Nocturne"
+  },
+  "tk-ex-m-7": {
+   "fr": "EX Kit Dresseur 2, demi-deck Négapi (2006)"
+  },
+  "pl1-36": {
+   "fr": "Boosters Platine · Deck à thème Épanouissement"
+  },
+  "pl1-102": {
+   "fr": "Boosters Platine · Deck à thème Épanouissement"
+  },
+  "col1-17:deck": {
+   "fr": "Deck à thème Reconnaissance (version non holo exclusive)"
+  },
+  "col1-75": {
+   "fr": "Boosters L'appel des Légendes · Deck à thème Reconnaissance"
+  },
+  "bwp-BW66": {
+   "fr": "Tripack NB08 Feunard (2013)"
+  },
+  "xy5-20": {
+   "fr": "Boosters Primo-Choc · Deck à thème Abysse Océanique"
+  },
+  "2016xy-1": {
+   "fr": "Collection McDonald's 2016 (Happy Meal)"
+  },
+  "sm2-21:kit14": {
+   "fr": "Kit du Dresseur Sablaireau d'Alola et Feunard d'Alola (2018)"
+  },
+  "sm2-21:kit29": {
+   "fr": "Kit du Dresseur Sablaireau d'Alola et Feunard d'Alola (2018)"
+  },
+  "sm2-21:tru": {
+   "fr": "Carte offerte chez Toys\"R\"Us (2017)"
+  },
+  "sm3-27": {
+   "fr": "Boosters Ombres Ardentes · Deck à thème Givre Lumineux"
+  },
+  "sm3-28:holo": {
+   "fr": "Deck à thème Givre Lumineux (holo exclusive)"
+  },
+  "smp-SM128:normal": {
+   "fr": "Kit du Dresseur Sablaireau d'Alola et Feunard d'Alola (2018)"
+  },
+  "smp-SM128:kit30": {
+   "fr": "Kit du Dresseur Sablaireau d'Alola et Feunard d'Alola (2018)"
+  },
+  "swsh1-22": {
+   "fr": "Boosters Épée et Bouclier · Deck à thème Pyrobut · Deck Combat-V Victini-V"
+  },
+  "swsh1-23": {
+   "fr": "Boosters Épée et Bouclier · Deck à thème Pyrobut · Deck Combat-V Victini-V"
+  },
+  "swsh2-26": {
+   "fr": "Boosters Clash des Rebelles · Coffret Feunard V (JouéClub, 2021)"
+  },
+  "swsh8-28:rev": {
+   "fr": "Boosters Poing de Fusion · Lot de 5 mini-boîtes Puissance de Kanto"
+  },
+  "swsh8-29:ba13": {
+   "fr": "Académie de Combat 2022, deck Pyrobut (sortie française à confirmer)"
+  },
+  "swsh8-29:ba18": {
+   "fr": "Académie de Combat 2022, deck Pyrobut (sortie française à confirmer)"
+  },
+  "swsh8-29:ba31": {
+   "fr": "Académie de Combat 2022, deck Pyrobut (sortie française à confirmer)"
+  },
+  "swsh8-30:ba7": {
+   "fr": "Académie de Combat 2022, deck Pyrobut (sortie française à confirmer)"
+  },
+  "swsh8-30:ba23": {
+   "fr": "Académie de Combat 2022, deck Pyrobut (sortie française à confirmer)"
+  },
+  "swsh12-033:snow": {
+   "fr": "Calendrier des fêtes JCC 2023"
+  },
+  "swsh12-033:prp": {
+   "fr": "Pack Récompense Play! Pokémon, série 3 (2023)"
+  },
+  "swsh12-034:prp": {
+   "fr": "Pack Récompense Play! Pokémon, série 3 (2023)"
+  },
+  "sv03-028": {
+   "fr": "Boosters Flammes Obsidiennes · Deck Combat Deluxe Feunard-ex"
+  },
+  "sv03.5-038": {
+   "fr": "Boosters 151 · Deck Combat Deluxe Feunard-ex"
+  },
+  "mfb-11": {
+   "fr": "Mon premier combat, mini-deck Salamèche (2023)"
+  },
+  "mfb-12": {
+   "fr": "Mon premier combat, mini-deck Salamèche (2023)"
+  }
+ },
+ "cards": [
+  {
+   "id": "en:classic-ponyta-004",
+   "g": "classic-ponyta",
+   "poke": "ponyta",
+   "gt": "Ponyta · Pokémon TCG Classic",
+   "gs": "Deck Dracaufeu & Ho-Oh ex · illustration d'Astres Radieux",
+   "go": "2023-11-03-0004",
+   "l": "en",
+   "n": "Ponyta",
+   "en": "Ponyta",
+   "s": "Pokémon TCG Classic",
+   "num": "004/034",
+   "r": "—",
+   "v": "Holo",
+   "b": "Coffret Pokémon TCG Classic (deck Dracaufeu & Ho-Oh ex)",
+   "y": 2023,
+   "img": "https://assets.tcgdex.net/en/swsh/swsh10/021",
+   "note": "Image : version Astres Radieux, même illustration."
+  },
+  {
+   "id": "en:classic-rapidash-005",
+   "g": "classic-rapidash",
+   "poke": "rapidash",
+   "gt": "Galopa · Pokémon TCG Classic",
+   "gs": "Deck Dracaufeu & Ho-Oh ex · illustration d'Astres Radieux",
+   "go": "2023-11-03-0005",
+   "l": "en",
+   "n": "Rapidash",
+   "en": "Rapidash",
+   "s": "Pokémon TCG Classic",
+   "num": "005/034",
+   "r": "—",
+   "v": "Holo",
+   "b": "Coffret Pokémon TCG Classic (deck Dracaufeu & Ho-Oh ex)",
+   "y": 2023,
+   "img": "https://assets.tcgdex.net/en/swsh/swsh10/022",
+   "note": "Image : version Astres Radieux, même illustration."
+  },
+  {
+   "id": "fr:2018sm-fr-9:normal",
+   "g": "2018sm-fr-9",
+   "poke": "vulpix",
+   "galar": true,
+   "l": "fr",
+   "n": "Goupix d'Alola",
+   "en": "Alolan Vulpix",
+   "s": "Collection McDonald's 2018",
+   "num": "9",
+   "r": "Promo",
+   "v": "Normale",
+   "y": 2018,
+   "img": null,
+   "gt": "Goupix d'Alola · Collection McDonald's 2018",
+   "gs": "Exclusivité française · Happy Meal McDonald's",
+   "go": "2018-06-13-0009",
+   "b": "Collection McDonald's 2018 (Happy Meal)"
+  },
+  {
+   "id": "fr:2018sm-fr-9:holo",
+   "g": "2018sm-fr-9",
+   "poke": "vulpix",
+   "galar": true,
+   "l": "fr",
+   "n": "Goupix d'Alola",
+   "en": "Alolan Vulpix",
+   "s": "Collection McDonald's 2018",
+   "num": "9",
+   "r": "Promo",
+   "v": "Holo paillettes",
+   "y": 2018,
+   "img": null,
+   "gt": "Goupix d'Alola · Collection McDonald's 2018",
+   "gs": "Exclusivité française · Happy Meal McDonald's",
+   "go": "2018-06-13-0009",
+   "b": "Collection McDonald's 2018 (Happy Meal)"
+  },
+  {
+   "id": "fr:2019sm-fr-13:normal",
+   "g": "2019sm-fr-13",
+   "poke": "vulpix",
+   "galar": true,
+   "l": "fr",
+   "n": "Goupix d'Alola",
+   "en": "Alolan Vulpix",
+   "s": "Collection McDonald's 2019",
+   "num": "13",
+   "r": "Promo",
+   "v": "Normale",
+   "y": 2019,
+   "img": null,
+   "gt": "Goupix d'Alola · Collection McDonald's 2019",
+   "gs": "Exclusivité française · Happy Meal McDonald's",
+   "go": "2019-10-30-0013",
+   "b": "Collection McDonald's 2019 (Happy Meal)"
+  },
+  {
+   "id": "fr:sm2-21a:holo",
+   "g": "sm2-21a",
+   "poke": "vulpix",
+   "galar": true,
+   "l": "fr",
+   "n": "Goupix d'Alola",
+   "en": "Alolan Vulpix",
+   "s": "Gardiens Ascendants (carte alternative A)",
+   "num": "21a/145",
+   "r": "Commune",
+   "v": "Holo",
+   "y": 2018,
+   "u": 1,
+   "img": "https://www.pokepedia.fr/images/a/aa/Carte_Soleil_et_Lune_Gardiens_Ascendants_21a.png",
+   "c": "GRI",
+   "cp": 0,
+   "gt": "Goupix d'Alola · Gardiens Ascendants (carte alternative A)",
+   "gs": "Illustration kirisAki · exclusivité Tripack",
+   "go": "2018-02-02-0021",
+   "b": "Tripack SL05 Goupix d'Alola (2018)",
+   "note": "Finition holo à confirmer."
+  }
+ ]
 }

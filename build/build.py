@@ -1,8 +1,9 @@
 """Builds ../index.html from template.html + data sources in src/.
 
-src/tcgdex_raw.json  TCGdex card details (en, fr, ja) for dexId 77 and 78
+src/tcgdex_raw.json  TCGdex card details (en, fr, ja) for dexId 77, 78 (Ponyta, Rapidash) and 37, 38 (Vulpix, Ninetales).
+                     English cards are only used as the binder skeleton (grouping, images, prices): the app shows FR, JP and CN.
 src/sets.json        TCGdex set names and release dates
-src/pg.json          Cardmarket public price guide (Pokémon), downloaded on each run (not committed, 15 MB)
+src/pg.json, src/ps.json   Cardmarket public price guide and product list (Pokémon), downloaded on each run (not committed)
 src/ja.json, src/zh.json   Japanese / simplified Chinese card lists (normalised, see asian.py)
 src/extra_enfr.json  English/French cards and variants missing from TCGdex
 src/icon.png         home-screen icon, 180×180
@@ -12,36 +13,48 @@ import json, os, re, sys, urllib.request
 HERE = os.path.dirname(os.path.abspath(__file__))
 SRC = os.path.join(HERE, "src")
 PRICE_GUIDE_URL = "https://downloads.s3.cardmarket.com/productCatalog/priceGuide/price_guide_6.json"
+PRODUCTS_URL = "https://downloads.s3.cardmarket.com/productCatalog/productList/products_singles_6.json"
 def jload(name, default=None):
     p = os.path.join(SRC, name)
     if not os.path.exists(p): return default
     with open(p, encoding="utf-8") as f: return json.load(f)
 
-if "--offline" not in sys.argv or not os.path.exists(os.path.join(SRC, "pg.json")):
-    print("Téléchargement du guide des prix Cardmarket…")
-    urllib.request.urlretrieve(PRICE_GUIDE_URL, os.path.join(SRC, "pg.json"))
+for url, name in ((PRICE_GUIDE_URL, "pg.json"), (PRODUCTS_URL, "ps.json")):
+    if "--offline" not in sys.argv or not os.path.exists(os.path.join(SRC, name)):
+        print("Téléchargement", name, "(Cardmarket)…")
+        urllib.request.urlretrieve(url, os.path.join(SRC, name))
 
 raw = jload("tcgdex_raw.json")
 SETS = jload("sets.json")
 PG = {p["idProduct"]: p for p in jload("pg.json")["priceGuides"]}
+PRODUCTS = jload("ps.json")["products"]
+PROD = {p["idProduct"]: p for p in PRODUCTS}
 
 def is_pocket(c):  # TCG Pocket (digital) sets A1, A1a, B1… and promo P-A
     sid = c["set"]["id"]
     return bool(re.match(r"^(A|B)\d", sid)) or sid.startswith("P-")
 
 EN = [c for c in raw["en"] if "id" in c and not is_pocket(c)]
+SET_EXP = {}
+for _c in EN:
+    _cm = ((_c.get("pricing") or {}).get("cardmarket") or {}).get("idProduct")
+    if _cm in PROD: SET_EXP.setdefault(_c["set"]["id"], PROD[_cm]["idExpansion"])
 FR = {c["id"]: c for c in raw["fr"] if "id" in c and not is_pocket(c)}
 
 NAME_FR = {
     "Ponyta": "Ponyta", "Rapidash": "Galopa", "Galarian Ponyta": "Ponyta de Galar",
     "Galarian Rapidash": "Galopa de Galar", "Galarian Rapidash V": "Galopa de Galar V",
-    "Dark Rapidash": "Galopa obscur", "Blaine's Ponyta": "Ponyta de Blaine",
-    "Blaine's Rapidash": "Galopa de Blaine", "Rapidash E4": "Galopa 4", "Karen's Rapidash": "Galopa de Marion",
+    "Dark Rapidash": "Galopa obscur", "Blaine's Ponyta": "Ponyta d'Auguste",
+    "Blaine's Rapidash": "Galopa d'Auguste", "Rapidash E4": "Galopa 4", "Karen's Rapidash": "Galopa de Marion",
+    "Vulpix": "Goupix", "Ninetales": "Feunard", "Alolan Vulpix": "Goupix d'Alola", "Alolan Ninetales": "Feunard d'Alola",
+    "Blaine's Vulpix": "Goupix d'Auguste", "Blaine's Ninetales": "Feunard d'Auguste", "Brock's Vulpix": "Goupix de Pierre",
+    "Brock's Ninetales": "Feunard de Pierre", "Light Ninetales": "Feunard lumineux",
 }
 RARITY_FR = {
     "Common": "Commune", "Uncommon": "Peu commune", "Rare": "Rare", "Holo Rare": "Rare holo", "Rare Holo": "Rare holo",
     "Ultra Rare": "Ultra rare", "Shiny rare": "Chromatique (Shiny)", "Illustration rare": "Illustration rare",
-    "Promo": "Promo", "None": "—",
+    "Promo": "Promo", "None": "—", "Double rare": "Double rare", "Secret Rare": "Secrète", "Holo Rare V": "Rare holo V",
+    "Holo Rare VSTAR": "Rare holo VSTAR", "Special illustration rare": "Illustration spéciale rare",
 }
 # French set names for sets TCGdex has no French data for (released in French: see extra_enfr.json notes)
 SET_FR_FALLBACK = {"gym1": "Gym Heroes", "gym2": "Gym Challenge", "pl4": "Arceus", "lc": "Legendary Collection"}
@@ -57,6 +70,8 @@ CM_FIX = {
     "lc-60": 274825, "base5-64": 274117, "base5-44": 274097, "base2-44": 273841, "ecard1-26": 274901,
     "ecard1-62": 274937, "ecard1-126": 275001, "ecard2-102": 275177, "ecard2-31": 275103, "basep-51": 275470,
     "ex6-13": 276189, "ex6-76": 276252, "hgss4-8": 279538, "hgss4-72": 279602,
+    # TCGdex points the holo and non-holo Ninetales of Expedition / Aquapolis to the same product
+    "ecard1-21": 274896, "ecard1-57": 274932, "ecard2-25": 275097, "ecard2-H19": 275042,
 }
 BOOSTER_NOTE = {
     "g1": "Boosters Générations (vendus en coffrets et blisters)",
@@ -78,8 +93,28 @@ def year(sid):
     return int(d[:4]), d
 
 def poke_of(name_en):
+    """(species key, regional form?) from an English card name."""
     n = name_en.lower()
-    return ("ponyta" if "ponyta" in n else "rapidash"), ("galarian" in n)
+    for k in ("ponyta", "rapidash", "vulpix", "ninetales"):
+        if k in n: return k, ("galarian" in n or "alolan" in n)
+    return "cameo", False
+
+def set_code(sid):
+    """Official set abbreviation and whether it is printed on the card (since Scarlet & Violet)."""
+    s = SETS.get(sid, {})
+    ab = ((s.get("fr") or {}).get("abbr") or (s.get("en") or {}).get("abbr") or {}).get("official")
+    printed = bool(re.match(r"^(sv|me|30th)", sid))
+    return ab, printed
+
+# Cardmarket expansion of each TCGdex set, learned from cards whose product id TCGdex knows
+def cm_auto(c):
+    """Find the Cardmarket single for an English TCGdex card by name + attacks inside the set's expansion."""
+    exp = SET_EXP.get(c["set"]["id"])
+    if not exp: return None
+    moves = [a["name"] for a in c.get("abilities", [])] + [a["name"] for a in c.get("attacks", [])]
+    want = (c["name"] + (" [" + " | ".join(moves) + "]" if moves else "")).lower()
+    hits = [p for p in PRODUCTS if p["idExpansion"] == exp and re.sub(r" \(V\.\d+\)", "", p["name"]).lower() == want]
+    return hits[0]["idProduct"] if len(hits) == 1 else None
 
 def variant_label(v, card, lang):
     """Return (key, label FR, uses reverse/holo price column, price note)."""
@@ -102,13 +137,19 @@ def variant_label(v, card, lang):
     if t == "reverse": return "rev", "Reverse", True, None
     if t == "holo":
         if foil == "cosmos": return "cosmos", "Holo cosmos", False, None
+        if foil == "snowflake": return "snow", "Holo tampon flocon", False, None
         return "holo", "Holo", False, None
-    if "holo" in rar: return "holo", "Holo", False, None
+    if any(k in rar for k in ("holo", "ultra", "secret", "shiny", "double", "illustration")): return "holo", "Holo", False, None
     if sub == "unlimited": return "unl", "Illimitée", False, None
     return "normal", "Normale", False, None
 
-# XY / SM sets: TCGdex has no variant data, but these sets had reverse holos in EN and FR (Bulbapedia, Cardmarket)
-REVERSE_ADD = {"xy2", "g1", "xy11", "xy12", "sm9", "sm12"}
+# BW / XY / SM main sets: TCGdex has no variant data, but every regular card (not EX/GX/BREAK, full art or secret)
+# also came as a reverse holo in EN and FR (Bulbapedia, Cardmarket)
+def needs_reverse(c):
+    sid, rar, name = c["set"]["id"], (c.get("rarity") or "").lower(), c["name"]
+    if not re.fullmatch(r"(bw|xy|sm)\d+|g1", sid): return False
+    if re.search(r"(EX|GX|BREAK)|-GX|-EX", name): return False
+    return not any(k in rar for k in ("ultra", "secret", "shiny"))
 IMG_FIX = {"swsh4.5sv-SV047": "https://images.pokemontcg.io/swsh45sv/SV047_hires.png",
            "swsh4.5sv-SV048": "https://images.pokemontcg.io/swsh45sv/SV048_hires.png"}
 
@@ -123,7 +164,7 @@ GID = {}
 
 def add_group(gid, poke, galar, y, date, title, sub, order):
     if gid in GID: return GID[gid]
-    g = {"id": gid, "poke": poke, "galar": galar, "y": y, "t": title, "s": sub, "o": order}
+    g = {"id": gid, "poke": poke, "rg": galar, "y": y, "t": title, "s": sub, "o": order}
     GROUPS.append(g); GID[gid] = g
     return g
 
@@ -137,6 +178,7 @@ def build_enfr():
     var_extra = extra.get("variants", [])             # extra variants [{id, lang, key, label, cm, h, b}]
     booster = extra.get("booster", {})                # "tcgdexid" or "tcgdexid:vkey" -> {"fr": "...", "en": "..."}
     labels = extra.get("labels", {})                  # card id -> variant label override
+    unc = {(ve["id"], ve["key"]) for ve in var_extra if ve.get("u")}
     for c in EN:
         sid = c["set"]["id"]; y, date = year(sid)
         if c["id"] in CARD_DATE: date = CARD_DATE[c["id"]]; y = int(date[:4])
@@ -152,7 +194,9 @@ def build_enfr():
         total = (SETS.get(sid, {}).get("en") or {}).get("total")
         lid = c["localId"]
         num = f"{lid}/{total}" if total and str(lid).isdigit() and sid not in ("basep", "swshp") else lid
-        base_cm = CM_FIX.get(c["id"]) or ((c.get("pricing") or {}).get("cardmarket") or {}).get("idProduct")
+        base_cm = CM_FIX.get(c["id"]) or ((c.get("pricing") or {}).get("cardmarket") or {}).get("idProduct") or cm_auto(c)
+        if c.get("image") and "img" not in g: g["img"] = c["image"]
+        code, printed = set_code(sid)
 
         langs = ["en"]
         if c["id"] not in fr_absent and sid not in EN_ONLY_SETS and (f or c["id"] in fr_force or sid in SET_FR_FALLBACK):
@@ -176,7 +220,7 @@ def build_enfr():
                 items.append((key, label, h, np, cm))
             if str(lid).startswith("SH"):
                 items = [("holo", "Holo chromatique", False, None, base_cm)]
-            if sid in REVERSE_ADD and "rev" not in {i[0] for i in items}:
+            if needs_reverse(c) and "rev" not in {i[0] for i in items}:
                 items.append(("rev", "Reverse", True, None, base_cm))
             if lang == "fr" and c["id"] in fr_force and fr_force[c["id"]].get("variants"):
                 keep = set(fr_force[c["id"]]["variants"]); items = [i for i in items if i[0] in keep]
@@ -203,6 +247,8 @@ def build_enfr():
                 if lang == "fr" and f and f.get("pricing", {}).get("cardmarket"): card["td"] = f["id"]
                 elif lang == "fr" and c.get("pricing", {}).get("cardmarket") and f: card["td"] = f["id"]
                 if lang == "fr" and not f: card["u"] = 0 if c["id"] in fr_force else 1
+                if code: card["c"] = code; card["cp"] = 1 if printed else 0
+                if (c["id"], key) in unc: card["u"] = 1
                 CARDS.append(card); CDATE[card["id"]] = date
     # cards absent from TCGdex entirely
     for e in extra.get("cards", []):
@@ -230,12 +276,33 @@ def build_asian():
                     "o": e.get("o", 0), "en": e.get("en")}
             if e.get("u"): card["u"] = 1
             if e.get("note"): card["note"] = e["note"]
+            if e.get("code"): card["c"] = e["code"]; card["cp"] = 1 if e.get("cp") else 0
             if e.get("cm") in PG: card["cm"] = e["cm"]; card["h"] = e.get("h", 0)
             CARDS.append({k: v for k, v in card.items() if v not in (None, "")}); CDATE[card["id"]] = f"{e['y']}-07-01"
+
+def build_cameos():
+    """Cards where Ponyta appears in the artwork without being the card's Pokémon (src/cameos.json)."""
+    for e in jload("cameos.json", []) or []:
+        gid = "cameo-" + e["group_key"]
+        if gid not in GID:
+            add_group(gid, "cameo", False, e["year"], str(e["year"]), f"{e['card_name_fr']} · {e['set_name_fr']}",
+                      f"Caméo : {e.get('where_in_art') or 'Ponyta dans l’illustration'}", f"{e['year']}-12-31-{num_sort(e.get('number')):04d}")
+        if e.get("image") and "img" not in GID[gid]: GID[gid]["img"] = e["image"]
+        card = {"id": e["id"], "g": gid, "l": e["lang"], "n": e["card_name"], "s": e["set_name_local"], "sf": e.get("set_name_fr"),
+                "num": e.get("number") or "", "r": e.get("rarity") or "—", "v": e.get("v") or "Normale", "b": e.get("product"),
+                "y": e["year"], "img": e.get("image"), "o": e.get("o", 0)}
+        if e.get("printed_code") or e.get("code"): card["c"] = e.get("printed_code") or e.get("code"); card["cp"] = 1 if e.get("printed_code") else 0
+        if e.get("uncertain"): card["u"] = 1
+        if e.get("cm") in PG: card["cm"] = e["cm"]; card["h"] = e.get("h", 0)
+        if e.get("td"): card["td"] = e["td"]
+        CARDS.append({k: v for k, v in card.items() if v not in (None, "")}); CDATE[card["id"]] = f"{e['year']}-07-01"
 
 def main():
     build_enfr()
     build_asian()
+    build_cameos()
+    # English prints only shape the binder (grouping, fallback images, prices); they are not shown
+    CARDS[:] = [c for c in CARDS if c["l"] != "en"]
     # group year = earliest card year; binder order = earliest release in any language
     for g in GROUPS:
         cs = [c for c in CARDS if c["g"] == g["id"]]

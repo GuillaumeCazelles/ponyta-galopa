@@ -6,10 +6,10 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
-<meta name="apple-mobile-web-app-title" content="Ponyta & Galopa">
+<meta name="apple-mobile-web-app-title" content="Ponyta & Goupix">
 <meta name="theme-color" content="#F6F1EA" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#16110D" media="(prefers-color-scheme: dark)">
-<title>Ponyta & Galopa</title>
+<title>Ponyta & Goupix</title>
 <link rel="apple-touch-icon" sizes="180x180" href="__ICON__">
 <link rel="icon" type="image/png" href="__ICON__">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -86,7 +86,8 @@ a{color:inherit}
 main{padding:16px 16px calc(96px + env(safe-area-inset-bottom,0px))}
 .pages{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,340px),1fr));gap:16px;align-items:start}
 .bpage{background:var(--page);border:1px solid var(--line);border-radius:14px;padding:10px 10px 12px;box-shadow:var(--shadow);content-visibility:auto;contain-intrinsic-size:auto 420px}
-.bpage.galar{border-top:4px solid var(--galar)}
+.bpage.rg{border-top:4px solid var(--galar)}
+.bpage.cameo{border-top:4px dashed var(--frame)}
 .bpage h2{margin:0 2px 2px;font:800 17px/1.15 var(--f-display);display:flex;gap:8px;align-items:baseline;justify-content:space-between}
 .bpage h2 span{font:500 11px var(--f-mono);color:var(--muted);white-space:nowrap}
 .bpage h2 em{font-style:normal;color:var(--good)}
@@ -99,7 +100,10 @@ main{padding:16px 16px calc(96px + env(safe-area-inset-bottom,0px))}
 .pocket .im img.alt{object-position:center}
 .pocket .lg{position:absolute;top:5px;left:5px;z-index:2;box-shadow:0 1px 3px rgba(0,0,0,.25)}
 .pocket .vt{position:absolute;left:4px;right:4px;bottom:4px;z-index:2;background:rgba(20,12,6,.72);color:#fff;border-radius:5px;padding:2px 4px;font:600 10px/1.2 var(--f-body);text-align:center;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.pocket .bk{display:block;margin-top:4px;font:500 11px/1.25 var(--f-body);color:var(--muted);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;min-height:2.5em}
+.pocket .cdl{display:flex;align-items:center;gap:5px;margin-top:5px;font:600 11px/1 var(--f-mono);color:var(--muted);white-space:nowrap;overflow:hidden}
+.cd{display:inline-block;background:var(--ink);color:var(--bg);border-radius:4px;padding:2px 5px;font:700 11px/1.1 var(--f-mono);letter-spacing:.02em}
+.cd.np{background:transparent;color:var(--muted);border:1px dashed var(--line);padding:1px 4px}
+.pocket .bk{display:block;margin-top:3px;font:500 11px/1.25 var(--f-body);color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .pocket .bk b{color:var(--ink);font-weight:600}
 .pocket .info{position:absolute;top:3px;right:3px;z-index:3;width:26px;height:26px;border-radius:50%;border:0;background:rgba(20,12,6,.55);color:#fff;font:700 13px/26px var(--f-display);text-align:center;cursor:pointer;padding:0}
 .pocket.own .im{border:3px solid var(--frame);box-shadow:0 0 0 1px var(--frame-2) inset}
@@ -187,7 +191,7 @@ dl.facts dd{margin:0;font-weight:600}
 .link{color:var(--ink);font-weight:600;text-decoration:underline;text-underline-offset:3px;background:none;border:0;padding:0;cursor:pointer;font-size:13px}
 .note{font-size:12.5px;color:var(--muted);margin:10px 0 0}
 .sibs{margin-top:14px;display:grid;grid-template-columns:repeat(auto-fill,minmax(84px,1fr));gap:8px}
-.sibs .pocket .bk{min-height:0;-webkit-line-clamp:1}
+
 .panel h3{margin:4px 0 6px;font:800 22px var(--f-display)}
 .panel h4{margin:18px 0 6px;font-size:14px}
 .panel p{margin:0 0 8px;color:var(--muted);font-size:13.5px}
@@ -205,7 +209,7 @@ textarea{width:100%;min-height:90px;border-radius:12px;border:1px solid var(--li
 <header class="top">
   <div class="wrap">
     <div class="row1">
-      <h1 class="brand">Ponyta & Galopa<small id="sub">Master set · FR · EN · JP · CN</small></h1>
+      <h1 class="brand">Ponyta & Goupix<small id="sub">Ponyta · Galopa · Goupix · Feunard</small></h1>
       <button class="iconbtn" id="menuBtn" aria-label="Sauvegarde et réglages">☰</button>
     </div>
     <div class="progress">
@@ -246,7 +250,7 @@ textarea{width:100%;min-height:90px;border-radius:12px;border:1px solid var(--li
 <script>
 "use strict";
 const API = "https://api.tcgdex.net/v2/fr";
-const LANGS = [["fr","Français","FR"],["en","Anglais","EN"],["ja","Japonais","JP"],["zh","Chinois","CN"]];
+const LANGS = [["fr","Français","FR"],["ja","Japonais","JP"],["zh","Chinois","CN"]];
 const LNAME = Object.fromEntries(LANGS.map(([k,n])=>[k,n]));
 const LTAG = Object.fromEntries(LANGS.map(([k,,t])=>[k,t]));
 const $ = s => document.querySelector(s);
@@ -262,20 +266,20 @@ function load(k, d){ try { const v = localStorage.getItem(k); return v ? JSON.pa
 function save(k, v){ try { localStorage.setItem(k, JSON.stringify(v)); return true; } catch { return false; } }
 let coll = load(KEY, {owned:{}});        // owned[cardId] = "YYYY-MM-DD"
 let live = load(LKEY, {at:0, p:{}});      // live.p[idProduct] = [avg30, trend, avg30Holo, trendHolo]
-let ui = Object.assign({tab:"cards", langs:["fr","en","ja","zh"], poke:"all", missingOnly:false, sort:"date", psort:"date"}, load(UKEY, {}));
+let ui = Object.assign({tab:"cards", langs:["fr","ja","zh"], poke:"all", missingOnly:false, sort:"date", psort:"date"}, load(UKEY, {}));
+ui.langs = ui.langs.filter(l => LANGS.some(([k]) => k===l)); if (!ui.langs.length) ui.langs = LANGS.map(([k])=>k);
 function persist(){ if(!save(KEY, coll)) toast("Impossible d'enregistrer : stockage plein ou bloqué"); }
 try { navigator.storage && navigator.storage.persist && navigator.storage.persist(); } catch {}
 
 /* ---------- data ---------- */
-// GROUPS[i] = {id, poke, galar, y, t (titre FR), s (sous-titre)} ; CARDS[i] = {id, g, l, n, s, num, r, v, b, y, img, cm, h, u, note}
+// GROUPS[i] = {id, poke, rg (forme régionale), y, t (titre FR), s (sous-titre), img} ; CARDS[i] = {id, g, l, n, s, sf, num, c (sigle), cp (sigle imprimé), r, v, b, y, img, cm, h, u, note}
 const G = new Map(GROUPS.map(g => [g.id, g]));
 const BY_ID = new Map(CARDS.map(c => [c.id, c]));
-for (const c of CARDS){ c.key = norm([c.n, c.s, c.num, c.v, c.b, c.r, G.get(c.g).t, LNAME[c.l]].join(" ")); }
+for (const c of CARDS){ c.key = norm([c.n, c.s, c.sf, c.num, c.c, c.v, c.b, c.r, G.get(c.g).t, LNAME[c.l]].join(" ")); }
 const groupCards = gid => CARDS.filter(c => c.g === gid);
 const GROUP_IMG = new Map();
 for (const c of CARDS) if (c.img && !GROUP_IMG.has(c.g)) GROUP_IMG.set(c.g, c.img);
-for (const c of CARDS) if (c.img && c.l==="en") GROUP_IMG.set(c.g, c.img);
-const imgOf = c => c.img || GROUP_IMG.get(c.g) || "";
+const imgOf = c => c.img || G.get(c.g).img || GROUP_IMG.get(c.g) || "";
 const thumb = u => u && u.includes("assets.tcgdex.net") ? u + "/low.webp" : u;
 const large = u => u && u.includes("assets.tcgdex.net") ? u + "/high.webp" : u;
 
@@ -294,7 +298,7 @@ function visibleCards(){ return CARDS.filter(c => ui.langs.includes(c.l) && poke
 function pokeOk(c){
   const g = G.get(c.g);
   if (ui.poke==="all") return true;
-  if (ui.poke==="galar") return g.galar;
+  if (ui.poke==="rg") return g.rg;
   return g.poke===ui.poke;
 }
 function renderStats(){
@@ -336,7 +340,7 @@ function renderChips(){
     const a = CARDS.filter(c=>c.l===k);
     return `<button class="chip" data-l="${k}" aria-pressed="${ui.langs.includes(k)}"><span class="lg ${k}">${t}</span>${n} <span class="n">${a.filter(isOwned).length}/${a.length}</span></button>`;
   }).join("");
-  const pk = [["all","Tous"],["ponyta","Ponyta"],["rapidash","Galopa"],["galar","Formes de Galar"]];
+  const pk = [["all","Tous"],["ponyta","Ponyta"],["rapidash","Galopa"],["vulpix","Goupix"],["ninetales","Feunard"],["rg","Formes régionales"],["cameo","Caméos de Ponyta"]];
   const miss = ui.tab==="cards" ? `<button class="chip" data-m="1" aria-pressed="${ui.missingOnly}">Manquantes seulement</button>` : "";
   $("#chips").innerHTML = miss + pk.map(([k,l],i)=>`<button class="chip${i===0&&miss?" sep":""}" data-p="${k}" aria-pressed="${ui.poke===k}">${l}</button>`).join("");
 }
@@ -375,22 +379,28 @@ function filteredCards(){
 /* ---------- binder ---------- */
 function pocketHTML(c, opts={}){
   const own = isOwned(c), im = imgOf(c), alt = !c.img && im;
-  const label = c.v + (c.num ? ` · ${c.num}` : "");
+  const label = c.v;
   return `<div class="pocket${own?" own":""}" role="button" tabindex="0" data-id="${esc(c.id)}" aria-pressed="${own}" aria-label="${esc(`${c.n}, ${LNAME[c.l]}, ${c.s}, ${c.v}`)}">
     <span class="im">${im?`<img loading="lazy" decoding="async" src="${esc(thumb(im))}" alt=""${alt?' class="alt"':""}>`:`<span class="ph">${esc(c.n)}</span>`}
       <span class="lg ${c.l}">${LTAG[c.l]}</span>
       <span class="vt">${esc(label)}</span></span>
     ${opts.noInfo?"":`<button class="info" data-info="${esc(c.id)}" aria-label="Fiche de la carte">i</button>`}
-    <span class="bk"><b>${esc((c.l==="ja"||c.l==="zh") && c.sf ? c.sf : c.s)}</b>${c.u?` <span class="unc" title="À vérifier">?</span>`:""}</span>
+    <span class="cdl">${codeHTML(c)}<span>${esc(c.num||"")}</span>${c.u?`<span class="unc" title="À vérifier">?</span>`:""}</span>
+    <span class="bk">${esc((c.l==="ja"||c.l==="zh") && c.sf ? c.sf : c.s)}</span>
   </div>`;
 }
+function codeHTML(c){ // set abbreviation; dashed when it is not printed on the card (older sets show only a symbol)
+  if (!c.c) return "";
+  return c.cp ? `<span class="cd">${esc(c.c)}</span>` : `<span class="cd np" title="Sigle officiel, non imprimé sur la carte">${esc(c.c)}</span>`;
+}
+const PORD = {ponyta:0, rapidash:1, vulpix:2, ninetales:3, cameo:4};
 function groupsOf(cards){
   const m = new Map();
   for (const c of cards){ if(!m.has(c.g)) m.set(c.g, []); m.get(c.g).push(c); }
   for (const a of m.values()) a.sort((x,y)=> LORD[x.l]-LORD[y.l] || (x.o??0)-(y.o??0));
   let gs = [...m.entries()].map(([gid, cs]) => ({g:G.get(gid), cs}));
   const s = ui.sort;
-  if (s==="poke") gs.sort((a,b)=> (a.g.poke===b.g.poke?0:a.g.poke==="ponyta"?-1:1) || (a.g.galar-b.g.galar) || a.g.o-b.g.o);
+  if (s==="poke") gs.sort((a,b)=> (PORD[a.g.poke]-PORD[b.g.poke]) || (a.g.rg-b.g.rg) || a.g.o-b.g.o);
   else if (s==="set") gs.sort((a,b)=> a.g.t.localeCompare(b.g.t,"fr"));
   else gs.sort((a,b)=> a.g.o-b.g.o);
   return gs;
@@ -413,7 +423,7 @@ function renderList(){
     const flat = [...arr].sort((a,b)=> (coll.owned[b.id]||"").localeCompare(coll.owned[a.id]||""));
     el.innerHTML = `<div class="bpage"><div class="grid">${flat.map(c=>pocketHTML(c,{noInfo:true})).join("")}</div></div>`; return;
   }
-  el.innerHTML = `<div class="pages">${gs.map(({g,cs}) => `<section class="bpage${g.galar?" galar":""}" data-g="${esc(g.id)}">
+  el.innerHTML = `<div class="pages">${gs.map(({g,cs}) => `<section class="bpage${g.rg?" rg":""}${g.poke==="cameo"?" cameo":""}" data-g="${esc(g.id)}">
       <h2>${esc(g.t)} <span>${g.y} · ${pageHead(g)}</span></h2>
       <p class="sub">${esc(g.s)}</p>
       <div class="grid">${cs.map(c=>pocketHTML(c,{noInfo:ui.tab==="coll"})).join("")}</div></section>`).join("")}</div>`;
@@ -452,8 +462,6 @@ $("#list").addEventListener("keydown", e => {
 function renderPrices(){
   const q = norm($("#q").value.trim());
   const fr = CARDS.filter(c => c.l==="fr" && pokeOk(c) && (!q || c.key.includes(q)));
-  const frGroups = new Set(CARDS.filter(c=>c.l==="fr").map(c=>c.g));
-  const enOnly = CARDS.filter(c => c.l==="en" && !frGroups.has(c.g) && pokeOk(c) && (!q || c.key.includes(q)));
   const sorter = arr => {
     const s = ui.psort;
     if (s==="date") return arr.sort((a,b)=> G.get(a.g).o-G.get(b.g).o || (a.o??0)-(b.o??0));
@@ -467,7 +475,7 @@ function renderPrices(){
     const p = priceOf(c), t = trendOf(c), im = imgOf(c);
     return `<button class="prow${isOwned(c)?" mine":""}" data-id="${esc(c.id)}">
       ${im?`<img loading="lazy" src="${esc(thumb(im))}" alt="">`:`<span class="th"></span>`}
-      <span class="t"><b>${esc(c.n)} · ${esc(c.v)}</b><small>${esc(c.s)}${c.num?` · ${esc(c.num)}`:""}${isOwned(c)?` · <i>possédée</i>`:""}</small></span>
+      <span class="t"><b>${esc(c.n)} · ${esc(c.v)}</b><small>${c.c?esc(c.c)+" · ":""}${esc(c.s)}${c.num?` · ${esc(c.num)}`:""}${isOwned(c)?` · <i>possédée</i>`:""}</small></span>
       <span class="r">${p==null?"—":eur(p)}<small>${c.np?esc(c.np):t!=null?"tendance "+eur(t):""}</small></span></button>`;
   };
   const date = live.at ? new Date(live.at).toLocaleString("fr-FR",{day:"2-digit",month:"2-digit",year:"numeric",hour:"2-digit",minute:"2-digit"}) : new Date(SNAP_DATE).toLocaleDateString("fr-FR");
@@ -477,7 +485,6 @@ function renderPrices(){
       <div><small>Master set FR</small><b>${eur(all)}</b></div>
     </div>
     <div class="plist">${sorter(fr).map(row).join("") || `<p class="empty">Aucune carte.</p>`}
-      ${enOnly.length?`<h3>Pas de version française · prix de la version anglaise</h3>${sorter(enOnly).map(row).join("")}`:""}
     </div>
     <p class="pnote">Prix Cardmarket du ${date}${nop?` · ${nop} cartes FR sans prix (1re édition, staff, cartes rares sans ventes récentes)`:""}. Cardmarket ne sépare pas les langues dans son guide des prix : c'est le prix moyen de la carte, toutes langues européennes confondues.
       <button class="link" id="refreshBtn">Actualiser via TCGdex</button></p>`;
@@ -523,6 +530,7 @@ function detailHTML(id){
       <dt>Booster / produit</dt><dd>${esc(c.s)}${c.sf&&c.sf!==c.s?`<br><span class="meta">${esc(c.sf)}</span>`:""}</dd>
       ${c.b?`<dt>Où la trouver</dt><dd>${esc(c.b)}</dd>`:""}
       <dt>Numéro</dt><dd>${esc(c.num||"—")}</dd>
+      ${c.c?`<dt>Sigle</dt><dd>${codeHTML(c)} ${c.cp?"imprimé en bas à gauche":"non imprimé sur la carte (symbole seulement)"}</dd>`:""}
       <dt>Rareté</dt><dd>${esc(c.r||"—")}</dd>
       <dt>Variante</dt><dd>${esc(c.v)}</dd>
       ${c.note?`<dt>Note</dt><dd>${esc(c.note)}</dd>`:""}
@@ -647,7 +655,7 @@ function zoomHTML(c){
     <div class="zc">${im?`<img src="${esc(large(im))}" alt="${esc(c.n)}">`:`<span class="ph">${esc(c.n)}<br>Pas d'image</span>`}</div>
     <div class="zi">
       <h3><span class="lg ${c.l}">${LTAG[c.l]}</span>${esc(c.n)}</h3>
-      <p><b>${esc((c.l==="ja"||c.l==="zh") && c.sf ? c.sf : c.s)}</b>${c.num?` · ${esc(c.num)}`:""}</p>
+      <p>${c.c?`<span class="cd">${esc(c.c)}</span> `:""}<b>${esc((c.l==="ja"||c.l==="zh") && c.sf ? c.sf : c.s)}</b>${c.num?` · ${esc(c.num)}`:""}</p>
       <p>${esc(c.v)}${c.r&&c.r!=="—"?` · ${esc(c.r)}`:""} · ${c.y}${c.u?` · <span class="unc">à vérifier</span>`:""}</p>
       ${c.b?`<p>${esc(c.b)}</p>`:""}
       ${!c.img&&im?`<p>Image d'une autre langue : même illustration.</p>`:""}
@@ -696,7 +704,7 @@ document.addEventListener("keydown", e => { if (e.key==="Escape") closeZoom(); }
 
 function renderAll(){ renderStats(); renderChips(); renderList(); }
 renderStats(); setTab(ui.tab);
-$("#sub").textContent = `Master set · ${CARDS.length} cartes · ${LANGS.map(l=>l[2]).join(" · ")}`;
+$("#sub").textContent = `Ponyta · Galopa · Goupix · Feunard · ${CARDS.length} cartes`;
 </script>
 </body>
 </html>

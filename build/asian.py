@@ -8,21 +8,34 @@ sys.path.insert(0, HERE)
 
 NAME_FR = {
     "ponyta": "Ponyta", "rapidash": "Galopa", "galar-ponyta": "Ponyta de Galar", "galar-rapidash": "Galopa de Galar",
-    "galar-rapidash-v": "Galopa de Galar V", "blaines-ponyta": "Ponyta de Blaine", "blaines-rapidash": "Galopa de Blaine",
+    "galar-rapidash-v": "Galopa de Galar V", "blaines-ponyta": "Ponyta d'Auguste", "blaines-rapidash": "Galopa d'Auguste",
     "rapidash-4": "Galopa 4", "dark-rapidash": "Galopa obscur", "karens-rapidash": "Galopa de Marion",
+    "vulpix": "Goupix", "ninetales": "Feunard", "alola-vulpix": "Goupix d'Alola", "alola-ninetales": "Feunard d'Alola",
+    "ninetales-ex": "Feunard-ex", "ninetales-v": "Feunard V", "ninetales-gx": "Feunard-GX", "ninetales-break": "Feunard TURBO",
+    "alola-ninetales-gx": "Feunard d'Alola-GX", "alola-vulpix-v": "Goupix d'Alola V", "alola-vulpix-vstar": "Goupix d'Alola VSTAR",
+    "blaines-vulpix": "Goupix d'Auguste", "blaines-ninetales": "Feunard d'Auguste", "brocks-vulpix": "Goupix de Pierre",
+    "brocks-ninetales": "Feunard de Pierre", "light-ninetales": "Feunard lumineux", "vulpix-delta": "Goupix δ", "ninetales-delta": "Feunard δ",
 }
-# English set name (as written in equivalent_en) -> TCGdex set id
-EN_SET = [
-    ("EX FireRed & LeafGreen", "ex6"), ("FireRed & LeafGreen", "ex6"), ("EX Delta Species", "ex11"), ("Delta Species", "ex11"),
-    ("Expedition Base Set", "ecard1"), ("Expedition", "ecard1"), ("Wizards Black Star Promo", "basep"),
-    ("SWSH Black Star Promo", "swshp"), ("Shining Fates", "swsh4.5sv"), ("Base Set", "base1"), ("Jungle", "base2"),
-    ("Team Rocket", "base5"), ("Gym Heroes", "gym1"), ("Gym Challenge", "gym2"), ("Aquapolis", "ecard2"),
-    ("Diamond & Pearl", "dp1"), ("Stormfront", "dp7"), ("Rising Rivals", "pl2"), ("Arceus", "pl4"),
-    ("Triumphant", "hgss4"), ("Flashfire", "xy2"), ("Generations", "g1"), ("Steam Siege", "xy11"),
-    ("Evolutions", "xy12"), ("Team Up", "sm9"), ("Cosmic Eclipse", "sm12"), ("Sword & Shield", "swsh1"),
-    ("Chilling Reign", "swsh6"), ("Astral Radiance", "swsh10"), ("Silver Tempest", "swsh12"), ("151", "sv03.5"),
-    ("Temporal Forces", "sv05"), ("Stellar Crown", "sv07"), ("Destined Rivals", "sv10"), ("Obsidian Flames", "sv03"),
-]
+def name_fr(slug):
+    if slug in NAME_FR: return NAME_FR[slug]
+    base = "Goupix" if "vulpix" in slug else "Feunard" if "ninetales" in slug else "Ponyta" if "ponyta" in slug else "Galopa"
+    reg = " d'Alola" if "alola" in slug else " de Galar" if "galar" in slug else ""
+    suf = next((" " + t.upper() for t in ("vmax", "vstar", "gx", "ex", "v", "break", "lv-x", "prime") if slug.endswith("-" + t)), "")
+    return base + reg + suf.replace("BREAK", "TURBO").replace(" EX", "-ex" if "ex" in slug else " EX")
+
+def species(slug):
+    for k in ("ponyta", "rapidash", "vulpix", "ninetales"):
+        if k in slug: return k
+    return "cameo"
+
+# English set name (as written in equivalent_en) -> TCGdex set id: every set TCGdex knows, plus aliases
+_SETS = json.load(open(os.path.join(SRC, "sets.json"), encoding="utf-8"))
+EN_SET = [((v.get("en") or {}).get("name"), sid) for sid, v in _SETS.items() if (v.get("en") or {}).get("name")]
+EN_SET += [("EX " + n, sid) for n, sid in list(EN_SET) if sid.startswith("ex")]
+EN_SET += [("Wizards Black Star Promo", "basep"), ("SWSH Black Star Promo", "swshp"), ("SM Black Star Promo", "smp"),
+           ("BW Black Star Promo", "bwp"), ("Hidden Fates", "sma"), ("Shining Fates", "swsh4.5sv"), ("Expedition", "ecard1"),
+           ("Platinum Arceus", "pl4"), ("HeartGold & SoulSilver", "hgss1"), ("Pokémon 151", "sv03.5"), ("Scarlet & Violet 151", "sv03.5")]
+EN_SET.sort(key=lambda x: -len(x[0]))
 
 def tcgdex_ids():
     raw = json.load(open(os.path.join(SRC, "tcgdex_raw.json"), encoding="utf-8"))
@@ -41,7 +54,7 @@ def group_for(eq):
     if eq.startswith("Pokémon TCG Classic"):
         return None
     for name, sid in EN_SET:
-        if eq.startswith(name + " ") or eq.startswith(name + " SV") :
+        if eq.startswith(name + " "):
             rest = eq[len(name):].strip()
             m = re.match(r"([A-Z]*\d+)", rest)
             if not m: continue
@@ -141,6 +154,56 @@ JA_SET_FR = {
     "Pokémon Card Game Battle Academy": ("Battle Academy (Écarlate et Violet)", "Coffret Battle Academy (deck Poussacha ex)"),
     "Hot Wind Arena": ("Hot Wind Arena (Rivalités Destinées japonais)", "Boosters Hot Wind Arena"),
     "Start Deck 100 Battle Collection": ("Start Deck 100 Battle Collection", "Start Deck 100 Battle Collection (certains decks numérotés)"),
+    # Vulpix / Ninetales
+    'Expansion Sheet 3 (Vending Machine cards)': ('Planche distributeur n°3 (verte)', 'Planches de cartes vendues en distributeur automatique, série 3'),
+    'Quick Starter Gift Set (Green Deck)': ('Quick Starter Gift Set · deck vert', 'Coffret Quick Starter Gift Set (deck vert)'),
+    "Leaders' Stadium": ("Leaders' Stadium (Gym Heroes japonais)", "Boosters Leaders' Stadium"),
+    'Nivi City Gym (theme deck)': ("Arène d'Argenta (deck Pierre)", "Deck préconstruit de l'arène d'Argenta"),
+    'Challenge from the Darkness': ('Challenge from the Darkness (Gym Challenge japonais)', 'Boosters Challenge from the Darkness'),
+    'Guren Town Gym (theme deck)': ("Arène de Cramois'Île (deck Auguste)", "Deck préconstruit de l'arène de Cramois'Île"),
+    'Darkness, and to Light...': ('Darkness, and to Light... (Neo Destiny japonais)', 'Boosters Darkness, and to Light...'),
+    'Pokémon Card VS': ('Pokémon VS', 'Boosters Pokémon VS (exclusivité japonaise)'),
+    'Pokémon Web': ('Pokémon Web', 'Pack Pokémon Web (exclusivité japonaise)'),
+    'Base Expansion Pack': ('Base Expansion Pack (Expedition japonais)', 'Boosters Base Expansion Pack'),
+    "McDonald's Pokémon-e Minimum Pack": ("Mini-pack McDonald's Pokémon-e", "Happy Meal McDonald's Japon"),
+    'Wind from the Sea': ('Wind from the Sea (Aquapolis japonais)', 'Boosters Wind from the Sea'),
+    'Undone Seal': ('Undone Seal (Légendes Oubliées japonais)', 'Boosters Undone Seal'),
+    'Fire Quick Construction Pack': ('Quick Construction Pack Feu', 'Quick Construction Pack Feu'),
+    'Offense and Defense of the Furthest Ends': ('Furthest Ends (Île des Dragons japonais)', 'Boosters Offense and Defense of the Furthest Ends'),
+    'World Champions Pack': ('World Champions Pack (Gardiens du Pouvoir japonais)', 'World Champions Pack'),
+    'Secret of the Lakes': ('Secret of the Lakes (Trésors Mystérieux japonais)', 'Boosters Secret of the Lakes'),
+    "Galactic's Conquest": ("Galactic's Conquest (Platine japonais)", "Boosters Galactic's Conquest"),
+    'Melee! Pokémon Scramble': ('Melee! Pokémon Scramble', 'Collection Pokémon Scramble × JCC'),
+    'SoulSilver Collection': ('SoulSilver Collection (HeartGold SoulSilver japonais)', 'Boosters SoulSilver Collection'),
+    'Magmortar Battle Starter Deck': ('Deck Battle Starter Maganon', 'Deck Battle Starter Maganon'),
+    'Dragon Blast': ('Dragon Blast (Dragons Exaltés japonais)', 'Boosters Dragon Blast'),
+    'BW-P Promotional cards': ('Promo BW-P', "Promo d'achat d'un display Dragon Blast / Dragon Blade"),
+    'EX Battle Boost': ('EX Battle Boost (Trésors Légendaires japonais)', 'Boosters EX Battle Boost'),
+    'Gaia Volcano': ('Gaia Volcano (Primo-Choc japonais)', 'Boosters Gaia Volcano'),
+    'XY-P Promotional cards': ('Promo XY-P', 'Pack promo Pokémon Card Gym'),
+    'SM-P Promotional cards': ('Promo SM-P', 'Promo'),
+    'Islands Await You': ('Islands Await You (Gardiens Ascendants japonais)', 'Boosters Islands Await You'),
+    'Facing a New Trial': ('Facing a New Trial', 'Boosters renforcés Facing a New Trial'),
+    'GX Battle Boost': ('GX Battle Boost', 'High-class pack GX Battle Boost'),
+    'Fairy Rise': ('Fairy Rise (Tonnerre Perdu japonais)', 'Boosters Fairy Rise'),
+    'GX Ultra Shiny': ('GX Ultra Shiny (Destinées Occultes japonais)', 'High-class pack GX Ultra Shiny'),
+    'Alter Genesis': ('Alter Genesis (Éclipse Cosmique japonais)', 'Boosters Alter Genesis'),
+    'Tag All Stars': ('Tag All Stars', 'High-class pack Tag All Stars'),
+    'V Starter Set Fire': ('Starter Set V Feu', 'Starter Set V Feu'),
+    'VMAX Rising': ('VMAX Rising (Clash des Rebelles japonais)', 'Boosters VMAX Rising'),
+    'Rebellion Crash': ('Rebellion Crash (Clash des Rebelles japonais)', 'Boosters Rebellion Crash'),
+    'V Starter Deck Fire (Incineroar)': ('Deck de démarrage V Feu · Félinferno V', 'Deck de démarrage V Feu (Félinferno V)'),
+    'Sword & Shield Family Pokémon Card Game': ('Coffret familial Épée et Bouclier', 'Coffret Family Pokémon Card Game'),
+    'Blue Sky Stream': ('Blue Sky Stream (Évolution Céleste japonais)', 'Boosters Blue Sky Stream'),
+    'Lost Abyss': ('Lost Abyss (Origine Perdue japonais)', 'Boosters Lost Abyss'),
+    'Incandescent Arcana': ('Incandescent Arcana (Tempête Argentée japonais)', 'Boosters Incandescent Arcana'),
+    'Charizard VSTAR vs Rayquaza VMAX Special Deck Set': ('Special Deck Set Dracaufeu VSTAR vs Rayquaza VMAX', 'Coffret Special Deck Set Dracaufeu VSTAR vs Rayquaza VMAX'),
+    'Ruler of the Black Flame': ('Ruler of the Black Flame (Flammes Obsidiennes japonais)', 'Boosters Ruler of the Black Flame'),
+    'Crimson Haze': ('Crimson Haze (Mascarade Crépusculaire japonais)', 'Boosters Crimson Haze'),
+    'Stellar Tera Type Starter Set Ceruledge ex': ('Starter Set Stellaire Malvalame ex', 'Starter Set Téracristal Stellaire Malvalame ex'),
+    'Mega Brave': ('Mega Brave (Méga-Évolution japonais)', 'Boosters Mega Brave'),
+    'Ninja Spinner': ('Ninja Spinner (Chaos Ascendant japonais)', 'Boosters Ninja Spinner'),
+    '30th Celebration Premium Deck Set Espeon & Umbreon': ('Premium Deck Set 30e anniversaire Mentali & Noctali', 'Coffret Premium Deck Set 30e anniversaire Mentali & Noctali'),
 }
 
 # cards Bulbapedia lists under an international card although they have no English print themselves
@@ -151,12 +214,12 @@ def norm_num(n):
     if n.startswith("No.0"): return n.split(" ")[0]
     return n
 
-def convert(lang, raw, set_fr):
+def convert(lang, raw, set_fr, printed):
     out, seen = [], {}
     for e in raw:
         slug = e["pokemon"]
-        poke = "ponyta" if "ponyta" in slug else "rapidash"
-        galar = slug.startswith("galar")
+        poke = species(slug)
+        galar = "galar" in slug or "alola" in slug
         g = GROUP_OVERRIDE.get((e.get("set_code"), (e.get("number") or "").split("/")[0])) or group_for(e.get("equivalent_en"))
         if not g and "Classic" in (e.get("set_name_en") or ""):
             g = f"classic-{poke}"
@@ -166,32 +229,40 @@ def convert(lang, raw, set_fr):
         cid = f"{lang}:{base}"
         if cid in seen: seen[cid] += 1; cid += f"-{seen[cid]}"
         else: seen[cid] = 0
-        name_fr = NAME_FR.get(slug, slug)
+        nfr = name_fr(slug)
+        # set abbreviation: printed code if the card has one, else the set code (shown as "not printed")
+        sc = e.get("set_code")
+        pc = e.get("printed_code") if "printed_code" in e else printed.get(sc)
+        code = pc or (sc if sc and re.fullmatch(r"[A-Za-z0-9.-]{2,8}", sc) else None)
         item = {
             "id": cid, "g": g, "poke": poke, "galar": galar, "y": e["year"],
-            "gt": f"{name_fr} · {tr[0]}", "gs": f"Exclusivité {'japonaise' if lang == 'ja' else 'chinoise'} · {e.get('set_name_local') or ''}",
-            "n": e.get("name_local") or name_fr, "s": e.get("set_name_local") or tr[0], "sf": tr[0],
+            "gt": f"{nfr} · {tr[0]}", "gs": f"Exclusivité {'japonaise' if lang == 'ja' else 'chinoise'} · {e.get('set_name_local') or ''}",
+            "n": e.get("name_local") or nfr, "code": code, "cp": bool(pc), "s": e.get("set_name_local") or tr[0], "sf": tr[0],
             "number": num, "r": None if e.get("rarity") in (None, "None") else e.get("rarity"),
-            "v": variant_fr(e.get("variant")), "b": tr[1], "img": e.get("image"), "en": e.get("equivalent_en"),
+            "v": variant_fr(e.get("variant")), "b": e.get("product_fr") or (f"Promo · {e.get('product')}" if re.fullmatch(r"(\w+-)?P", sc or "") and e.get("product") else tr[1]), "img": e.get("image"), "en": e.get("equivalent_en"),
             "u": bool(e.get("uncertain")), "set_code": e.get("set_code") or "x",
         }
         if e.get("notes") and len(e["notes"]) < 220: item["note"] = e["notes"]
         out.append(item)
     return out
 
+def load_list(*names):
+    out = []
+    for n in names:
+        p = os.path.join(SRC, n)
+        if os.path.exists(p): out += json.load(open(p, encoding="utf-8"))
+    return out
+
 def main():
-    ja = json.load(open(os.path.join(SRC, "ja_cards_raw.json"), encoding="utf-8"))
-    res = convert("ja", ja, JA_SET_FR)
-    json.dump(res, open(os.path.join(SRC, "ja.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
-    miss = [r for r in res if not r["g"]]
-    print("ja", len(res), "grouped", len(res) - len(miss), "jp-only", len(miss))
-    zp = os.path.join(SRC, "zh_cards_raw.json")
-    if os.path.exists(zp):
-        from zh_sets import ZH_SET_FR
-        zh = json.load(open(zp, encoding="utf-8"))
-        res = convert("zh", zh, ZH_SET_FR)
-        json.dump(res, open(os.path.join(SRC, "zh.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
-        print("zh", len(res), "grouped", sum(1 for r in res if r["g"]))
+    from zh_sets import ZH_SET_FR
+    for lang, files, set_fr, codes in (
+        ("ja", ("ja_cards_raw.json", "ja_vulpix_raw.json"), JA_SET_FR, "ja_printed_codes.json"),
+        ("zh", ("zh_cards_raw.json", "zh_vulpix_raw.json"), ZH_SET_FR, "zh_printed_codes.json"),
+    ):
+        printed = json.load(open(os.path.join(SRC, codes), encoding="utf-8")) if os.path.exists(os.path.join(SRC, codes)) else {}
+        res = convert(lang, load_list(*files), set_fr, printed)
+        json.dump(res, open(os.path.join(SRC, f"{lang}.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+        print(lang, len(res), "grouped", sum(1 for r in res if r["g"]))
 
 if __name__ == "__main__":
     main()

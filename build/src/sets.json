@@ -1,236 +1,73 @@
 {
-"A1a": {
+"2016xy": {
 "en": {
-"name": "Mythical Island",
-"date": "2024-12-17",
-"serie": "Pokémon TCG Pocket",
-"total": 68,
-"logo": "https://assets.tcgdex.net/en/tcgp/A1a/logo",
-"symbol": null
+"name": "McDonald's Collection 2016",
+"date": "2016-08-20",
+"serie": "McDonald's Collection",
+"total": 12,
+"abbr": {
+"official": "MCD16"
+},
+"symbol": null,
+"logo": null
 },
 "fr": {
-"name": "L’Île Fabuleuse",
-"date": "2024-12-17",
-"serie": "Jeu de Cartes à Collectionner Pokémon Pocket",
-"total": 68,
-"logo": null,
-"symbol": null
+"name": "Collection McDonald's 2016",
+"date": "2016-08-20",
+"serie": "Collection McDonald's",
+"total": 12,
+"abbr": {
+"official": "MCD16",
+"localized": "M16"
+},
+"symbol": null,
+"logo": null
 }
 },
-"xy2": {
-"en": {
-"name": "Flashfire",
-"date": "2014-05-07",
-"serie": "XY",
-"total": 106,
-"logo": "https://assets.tcgdex.net/en/xy/xy2/logo",
-"symbol": "https://assets.tcgdex.net/univ/xy/xy2/symbol"
-},
+"2018sm-fr": {
 "fr": {
-"name": "Étincelles",
-"date": "2014-05-07",
-"serie": "XY",
-"total": 106,
-"logo": "https://assets.tcgdex.net/fr/xy/xy2/logo",
-"symbol": "https://assets.tcgdex.net/univ/xy/xy2/symbol"
+"name": "Collection McDonald's 2018",
+"date": "2018-06-13",
+"serie": "Collection McDonald's",
+"total": 40,
+"abbr": null,
+"symbol": null,
+"logo": null
 }
 },
-"g1": {
-"en": {
-"name": "Generations",
-"date": "2016-02-22",
-"serie": "XY",
-"total": 83,
-"logo": "https://assets.tcgdex.net/en/xy/g1/logo",
-"symbol": "https://assets.tcgdex.net/univ/xy/g1/symbol"
-},
+"2019sm-fr": {
 "fr": {
-"name": "Générations",
-"date": "2016-02-22",
-"serie": "XY",
-"total": 83,
-"logo": "https://assets.tcgdex.net/fr/xy/g1/logo",
-"symbol": "https://assets.tcgdex.net/univ/xy/g1/symbol"
+"name": "Collection McDonald's 2019",
+"date": "2019-10-30",
+"serie": "Collection McDonald's",
+"total": 40,
+"abbr": null,
+"symbol": null,
+"logo": null
 }
 },
-"xy11": {
+"30th": {
 "en": {
-"name": "Steam Siege",
-"date": "2016-08-03",
-"serie": "XY",
-"total": 114,
-"logo": "https://assets.tcgdex.net/en/xy/xy11/logo",
-"symbol": "https://assets.tcgdex.net/univ/xy/xy11/symbol"
+"name": "30th Celebration",
+"date": "2026-09-16",
+"serie": "Mega Evolution",
+"total": 128,
+"abbr": {
+"official": "30C"
+},
+"symbol": null,
+"logo": null
 },
 "fr": {
-"name": "Offensive Vapeur",
-"date": "2016-08-03",
-"serie": "XY",
-"total": 114,
-"logo": "https://assets.tcgdex.net/fr/xy/xy11/logo",
-"symbol": "https://assets.tcgdex.net/univ/xy/xy11/symbol"
-}
+"name": "30ᵉ Anniversaire",
+"date": "2026-09-16",
+"serie": "Méga-Évolution",
+"total": 128,
+"abbr": {
+"official": "30C"
 },
-"sm9": {
-"en": {
-"name": "Team Up",
-"date": "2019-01-31",
-"serie": "Sun & Moon",
-"total": 181,
-"logo": "https://assets.tcgdex.net/en/sm/sm9/logo",
-"symbol": "https://assets.tcgdex.net/univ/sm/sm9/symbol"
-},
-"fr": {
-"name": "Duo de Choc",
-"date": "2019-01-31",
-"serie": "Soleil et Lune",
-"total": 181,
-"logo": "https://assets.tcgdex.net/fr/sm/sm9/logo",
-"symbol": "https://assets.tcgdex.net/univ/sm/sm9/symbol"
-}
-},
-"xy12": {
-"en": {
-"name": "Evolutions",
-"date": "2016-11-02",
-"serie": "XY",
-"total": 108,
-"logo": "https://assets.tcgdex.net/en/xy/xy12/logo",
-"symbol": "https://assets.tcgdex.net/univ/xy/xy12/symbol"
-},
-"fr": {
-"name": "Évolutions",
-"date": "2016-11-02",
-"serie": "XY",
-"total": 108,
-"logo": "https://assets.tcgdex.net/fr/xy/xy12/logo",
-"symbol": "https://assets.tcgdex.net/univ/xy/xy12/symbol"
-}
-},
-"sv07": {
-"en": {
-"name": "Stellar Crown",
-"date": "2024-09-13",
-"serie": "Scarlet & Violet",
-"total": 142,
-"logo": "https://assets.tcgdex.net/en/sv/sv07/logo",
-"symbol": null
-},
-"fr": {
-"name": "Couronne Stellaire",
-"date": "2024-09-13",
-"serie": "Écarlate et Violet",
-"total": 142,
-"logo": "https://assets.tcgdex.net/fr/sv/sv07/logo",
-"symbol": null
-}
-},
-"swsh10": {
-"en": {
-"name": "Astral Radiance",
-"date": "2022-05-27",
-"serie": "Sword & Shield",
-"total": 189,
-"logo": "https://assets.tcgdex.net/en/swsh/swsh10/logo",
-"symbol": "https://assets.tcgdex.net/univ/swsh/swsh10/symbol"
-},
-"fr": {
-"name": "Astres Radieux",
-"date": "2022-05-27",
-"serie": "Épée et Bouclier",
-"total": 189,
-"logo": "https://assets.tcgdex.net/fr/swsh/swsh10/logo",
-"symbol": "https://assets.tcgdex.net/univ/swsh/swsh10/symbol"
-}
-},
-"swsh12": {
-"en": {
-"name": "Silver Tempest",
-"date": "2022-11-11",
-"serie": "Sword & Shield",
-"total": 195,
-"logo": "https://assets.tcgdex.net/en/swsh/swsh12/logo",
-"symbol": "https://assets.tcgdex.net/univ/swsh/swsh12/symbol"
-},
-"fr": {
-"name": "Tempête Argentée",
-"date": "2022-11-11",
-"serie": "Épée et Bouclier",
-"total": 195,
-"logo": "https://assets.tcgdex.net/fr/swsh/swsh12/logo",
-"symbol": "https://assets.tcgdex.net/univ/swsh/swsh12/symbol"
-}
-},
-"sm12": {
-"en": {
-"name": "Cosmic Eclipse",
-"date": "2019-11-01",
-"serie": "Sun & Moon",
-"total": 236,
-"logo": "https://assets.tcgdex.net/en/sm/sm12/logo",
-"symbol": "https://assets.tcgdex.net/univ/sm/sm12/symbol"
-},
-"fr": {
-"name": "Éclipse Cosmique",
-"date": "2019-11-01",
-"serie": "Soleil et Lune",
-"total": 236,
-"logo": "https://assets.tcgdex.net/fr/sm/sm12/logo",
-"symbol": "https://assets.tcgdex.net/univ/sm/sm12/symbol"
-}
-},
-"sv05": {
-"en": {
-"name": "Temporal Forces",
-"date": "2024-03-22",
-"serie": "Scarlet & Violet",
-"total": 162,
-"logo": null,
-"symbol": "https://assets.tcgdex.net/univ/sv/sv05/symbol"
-},
-"fr": {
-"name": "Forces Temporelles",
-"date": "2024-03-22",
-"serie": "Écarlate et Violet",
-"total": 162,
-"logo": "https://assets.tcgdex.net/fr/sv/sv05/logo",
-"symbol": "https://assets.tcgdex.net/univ/sv/sv05/symbol"
-}
-},
-"sv10": {
-"en": {
-"name": "Destined Rivals",
-"date": "2025-05-30",
-"serie": "Scarlet & Violet",
-"total": 182,
-"logo": "https://assets.tcgdex.net/en/sv/sv10/logo",
-"symbol": "https://assets.tcgdex.net/univ/sv/sv10/symbol"
-},
-"fr": {
-"name": "Rivalités Destinées",
-"date": "2025-05-30",
-"serie": "Écarlate et Violet",
-"total": 182,
-"logo": "https://assets.tcgdex.net/fr/sv/sv10/logo",
-"symbol": "https://assets.tcgdex.net/univ/sv/sv10/symbol"
-}
-},
-"B1": {
-"en": {
-"name": "Mega Rising",
-"date": "2025-10-30",
-"serie": "Pokémon TCG Pocket",
-"total": 226,
-"logo": "https://assets.tcgdex.net/en/tcgp/B1/logo",
-"symbol": "https://assets.tcgdex.net/univ/tcgp/B1/symbol"
-},
-"fr": {
-"name": "Méga-Ascension",
-"date": "2025-10-30",
-"serie": "Jeu de Cartes à Collectionner Pokémon Pocket",
-"total": 226,
-"logo": null,
-"symbol": "https://assets.tcgdex.net/univ/tcgp/B1/symbol"
+"symbol": null,
+"logo": null
 }
 },
 "A1": {
@@ -239,26 +76,98 @@
 "date": "2024-10-30",
 "serie": "Pokémon TCG Pocket",
 "total": 226,
-"logo": "https://assets.tcgdex.net/en/tcgp/A1/logo",
-"symbol": "https://assets.tcgdex.net/univ/tcgp/A1/symbol"
+"abbr": null,
+"symbol": "https://assets.tcgdex.net/univ/tcgp/A1/symbol",
+"logo": "https://assets.tcgdex.net/en/tcgp/A1/logo"
 },
 "fr": {
 "name": "Puissance Génétique",
 "date": "2024-10-30",
 "serie": "Jeu de Cartes à Collectionner Pokémon Pocket",
 "total": 226,
-"logo": null,
-"symbol": "https://assets.tcgdex.net/univ/tcgp/A1/symbol"
+"abbr": null,
+"symbol": "https://assets.tcgdex.net/univ/tcgp/A1/symbol",
+"logo": null
 }
 },
-"pl4": {
+"A1a": {
 "en": {
-"name": "Arceus",
-"date": "2009-11-04",
-"serie": "Platinum",
-"total": 99,
-"logo": "https://assets.tcgdex.net/en/pl/pl4/logo",
-"symbol": "https://assets.tcgdex.net/univ/pl/pl4/symbol"
+"name": "Mythical Island",
+"date": "2024-12-17",
+"serie": "Pokémon TCG Pocket",
+"total": 68,
+"abbr": null,
+"symbol": null,
+"logo": "https://assets.tcgdex.net/en/tcgp/A1a/logo"
+},
+"fr": {
+"name": "L’Île Fabuleuse",
+"date": "2024-12-17",
+"serie": "Jeu de Cartes à Collectionner Pokémon Pocket",
+"total": 68,
+"abbr": null,
+"symbol": null,
+"logo": null
+}
+},
+"A3": {
+"en": {
+"name": "Celestial Guardians",
+"date": "2025-04-30",
+"serie": "Pokémon TCG Pocket",
+"total": 155,
+"abbr": null,
+"symbol": null,
+"logo": "https://assets.tcgdex.net/en/tcgp/A3/logo"
+},
+"fr": {
+"name": "Gardiens Astraux",
+"date": "2025-04-30",
+"serie": "Jeu de Cartes à Collectionner Pokémon Pocket",
+"total": 155,
+"abbr": null,
+"symbol": null,
+"logo": null
+}
+},
+"A4": {
+"en": {
+"name": "Wisdom of Sea and Sky",
+"date": "2025-07-30",
+"serie": "Pokémon TCG Pocket",
+"total": 161,
+"abbr": null,
+"symbol": null,
+"logo": "https://assets.tcgdex.net/en/tcgp/A4/logo"
+},
+"fr": {
+"name": "Sagesse Entre Ciel et Mer",
+"date": "2025-07-30",
+"serie": "Jeu de Cartes à Collectionner Pokémon Pocket",
+"total": 161,
+"abbr": null,
+"symbol": null,
+"logo": null
+}
+},
+"B1": {
+"en": {
+"name": "Mega Rising",
+"date": "2025-10-30",
+"serie": "Pokémon TCG Pocket",
+"total": 226,
+"abbr": null,
+"symbol": "https://assets.tcgdex.net/univ/tcgp/B1/symbol",
+"logo": "https://assets.tcgdex.net/en/tcgp/B1/logo"
+},
+"fr": {
+"name": "Méga-Ascension",
+"date": "2025-10-30",
+"serie": "Jeu de Cartes à Collectionner Pokémon Pocket",
+"total": 226,
+"abbr": null,
+"symbol": "https://assets.tcgdex.net/univ/tcgp/B1/symbol",
+"logo": null
 }
 },
 "B2": {
@@ -267,16 +176,38 @@
 "date": "2026-01-29",
 "serie": "Pokémon TCG Pocket",
 "total": 155,
-"logo": "https://assets.tcgdex.net/en/tcgp/B2/logo",
-"symbol": "https://assets.tcgdex.net/univ/tcgp/B2/symbol"
+"abbr": null,
+"symbol": "https://assets.tcgdex.net/univ/tcgp/B2/symbol",
+"logo": "https://assets.tcgdex.net/en/tcgp/B2/logo"
 },
 "fr": {
 "name": "Parade Onirique",
 "date": "2026-01-29",
 "serie": "Jeu de Cartes à Collectionner Pokémon Pocket",
 "total": 155,
-"logo": null,
-"symbol": "https://assets.tcgdex.net/univ/tcgp/B2/symbol"
+"abbr": null,
+"symbol": "https://assets.tcgdex.net/univ/tcgp/B2/symbol",
+"logo": null
+}
+},
+"P-A": {
+"en": {
+"name": "Promos-A",
+"date": "2024-10-30",
+"serie": "Pokémon TCG Pocket",
+"total": 0,
+"abbr": null,
+"symbol": null,
+"logo": "https://assets.tcgdex.net/en/tcgp/P-A/logo"
+},
+"fr": {
+"name": "Promo-A",
+"date": "2024-10-30",
+"serie": "Jeu de Cartes à Collectionner Pokémon Pocket",
+"total": 0,
+"abbr": null,
+"symbol": null,
+"logo": null
 }
 },
 "base1": {
@@ -285,262 +216,23 @@
 "date": "1999-01-09",
 "serie": "Base",
 "total": 102,
-"logo": "https://assets.tcgdex.net/en/base/base1/logo",
-"symbol": null
+"abbr": {
+"official": "BS"
+},
+"symbol": null,
+"logo": "https://assets.tcgdex.net/en/base/base1/logo"
 },
 "fr": {
 "name": "Set de Base",
 "date": "1999-01-09",
 "serie": "Base",
 "total": 102,
-"logo": null,
-"symbol": null
-}
+"abbr": {
+"official": "BS",
+"localized": "BAS"
 },
-"gym1": {
-"en": {
-"name": "Gym Heroes",
-"date": "2000-08-14",
-"serie": "Gym",
-"total": 132,
-"logo": "https://assets.tcgdex.net/en/gym/gym1/logo",
-"symbol": "https://assets.tcgdex.net/univ/gym/gym1/symbol"
-}
-},
-"base5": {
-"en": {
-"name": "Team Rocket",
-"date": "2000-04-24",
-"serie": "Base",
-"total": 82,
-"logo": "https://assets.tcgdex.net/en/base/base5/logo",
-"symbol": "https://assets.tcgdex.net/univ/base/base5/symbol"
-},
-"fr": {
-"name": "Team Rocket",
-"date": "2000-04-24",
-"serie": "Base",
-"total": 82,
-"logo": "https://assets.tcgdex.net/fr/base/base5/logo",
-"symbol": "https://assets.tcgdex.net/univ/base/base5/symbol"
-}
-},
-"gym2": {
-"en": {
-"name": "Gym Challenge",
-"date": "2000-10-16",
-"serie": "Gym",
-"total": 132,
-"logo": "https://assets.tcgdex.net/en/gym/gym2/logo",
-"symbol": "https://assets.tcgdex.net/univ/gym/gym2/symbol"
-}
-},
-"dp7": {
-"en": {
-"name": "Stormfront",
-"date": "2008-11-01",
-"serie": "Diamond & Pearl",
-"total": 100,
-"logo": "https://assets.tcgdex.net/en/dp/dp7/logo",
-"symbol": "https://assets.tcgdex.net/univ/dp/dp7/symbol"
-},
-"fr": {
-"name": "Tempête",
-"date": "2008-11-01",
-"serie": "Diamant & Perle",
-"total": 100,
-"logo": "https://assets.tcgdex.net/fr/dp/dp7/logo",
-"symbol": "https://assets.tcgdex.net/univ/dp/dp7/symbol"
-}
-},
-"hgss4": {
-"en": {
-"name": "Triumphant",
-"date": "2010-11-03",
-"serie": "HeartGold & SoulSilver",
-"total": 102,
-"logo": "https://assets.tcgdex.net/en/hgss/hgss4/logo",
-"symbol": "https://assets.tcgdex.net/univ/hgss/hgss4/symbol"
-},
-"fr": {
-"name": "Triomphant",
-"date": "2010-11-03",
-"serie": "HeartGold SoulSilver",
-"total": 102,
-"logo": "https://assets.tcgdex.net/fr/hgss/hgss4/logo",
-"symbol": "https://assets.tcgdex.net/univ/hgss/hgss4/symbol"
-}
-},
-"ex6": {
-"en": {
-"name": "FireRed & LeafGreen",
-"date": "2004-09-01",
-"serie": "EX",
-"total": 112,
-"logo": "https://assets.tcgdex.net/en/ex/ex6/logo",
-"symbol": "https://assets.tcgdex.net/univ/ex/ex6/symbol"
-},
-"fr": {
-"name": "EX Rouge Feu & Vert Feuille",
-"date": "2004-09-01",
-"serie": "EX",
-"total": 112,
-"logo": "https://assets.tcgdex.net/fr/ex/ex6/logo",
-"symbol": "https://assets.tcgdex.net/univ/ex/ex6/symbol"
-}
-},
-"sv03.5": {
-"en": {
-"name": "151",
-"date": "2023-09-22",
-"serie": "Scarlet & Violet",
-"total": 165,
-"logo": "https://assets.tcgdex.net/en/sv/sv03.5/logo",
-"symbol": "https://assets.tcgdex.net/univ/sv/sv03.5/symbol"
-},
-"fr": {
-"name": "151",
-"date": "2023-09-22",
-"serie": "Écarlate et Violet",
-"total": 165,
-"logo": "https://assets.tcgdex.net/fr/sv/sv03.5/logo",
-"symbol": "https://assets.tcgdex.net/univ/sv/sv03.5/symbol"
-}
-},
-"ex11": {
-"en": {
-"name": "Delta Species",
-"date": "2005-10-31",
-"serie": "EX",
-"total": 113,
-"logo": "https://assets.tcgdex.net/en/ex/ex11/logo",
-"symbol": "https://assets.tcgdex.net/univ/ex/ex11/symbol"
-},
-"fr": {
-"name": "EX Espèces Delta",
-"date": "2005-10-31",
-"serie": "EX",
-"total": 113,
-"logo": "https://assets.tcgdex.net/fr/ex/ex11/logo",
-"symbol": "https://assets.tcgdex.net/univ/ex/ex11/symbol"
-}
-},
-"swsh1": {
-"en": {
-"name": "Sword & Shield",
-"date": "2020-02-07",
-"serie": "Sword & Shield",
-"total": 202,
-"logo": "https://assets.tcgdex.net/en/swsh/swsh1/logo",
-"symbol": "https://assets.tcgdex.net/univ/swsh/swsh1/symbol"
-},
-"fr": {
-"name": "Épée et Bouclier",
-"date": "2020-02-07",
-"serie": "Épée et Bouclier",
-"total": 202,
-"logo": "https://assets.tcgdex.net/fr/swsh/swsh1/logo",
-"symbol": "https://assets.tcgdex.net/univ/swsh/swsh1/symbol"
-}
-},
-"lc": {
-"en": {
-"name": "Legendary Collection",
-"date": "2002-05-24",
-"serie": "Legendary Collection",
-"total": 110,
-"logo": "https://assets.tcgdex.net/en/lc/lc/logo",
-"symbol": "https://assets.tcgdex.net/univ/lc/lc/symbol"
-}
-},
-"dp1": {
-"en": {
-"name": "Diamond & Pearl",
-"date": "2007-05-01",
-"serie": "Diamond & Pearl",
-"total": 130,
-"logo": "https://assets.tcgdex.net/en/dp/dp1/logo",
-"symbol": "https://assets.tcgdex.net/univ/dp/dp1/symbol"
-},
-"fr": {
-"name": "Diamant & Perle",
-"date": "2007-05-01",
-"serie": "Diamant & Perle",
-"total": 130,
-"logo": "https://assets.tcgdex.net/fr/dp/dp1/logo",
-"symbol": "https://assets.tcgdex.net/univ/dp/dp1/symbol"
-}
-},
-"ecard2": {
-"en": {
-"name": "Aquapolis",
-"date": "2003-01-15",
-"serie": "E-Card",
-"total": 147,
-"logo": "https://assets.tcgdex.net/en/ecard/ecard2/logo",
-"symbol": "https://assets.tcgdex.net/univ/ecard/ecard2/symbol"
-},
-"fr": {
-"name": "Aquapolis",
-"date": "2003-01-15",
-"serie": "e-cards",
-"total": 147,
-"logo": "https://assets.tcgdex.net/fr/ecard/ecard2/logo",
-"symbol": "https://assets.tcgdex.net/univ/ecard/ecard2/symbol"
-}
-},
-"ecard1": {
-"en": {
-"name": "Expedition Base Set",
-"date": "2002-09-15",
-"serie": "E-Card",
-"total": 165,
-"logo": "https://assets.tcgdex.net/en/ecard/ecard1/logo",
-"symbol": "https://assets.tcgdex.net/univ/ecard/ecard1/symbol"
-},
-"fr": {
-"name": "Expedition",
-"date": "2002-09-15",
-"serie": "e-cards",
-"total": 165,
-"logo": "https://assets.tcgdex.net/fr/ecard/ecard1/logo",
-"symbol": "https://assets.tcgdex.net/univ/ecard/ecard1/symbol"
-}
-},
-"swsh4.5sv": {
-"en": {
-"name": "Shining Fates Shiny Vault",
-"date": "2021-02-19",
-"serie": "Sword & Shield",
-"total": 122,
-"logo": null,
-"symbol": null
-},
-"fr": {
-"name": "Destinées Radieuses Coffre Étincelant",
-"date": "2021-02-19",
-"serie": "Épée et Bouclier",
-"total": 122,
-"logo": null,
-"symbol": null
-}
-},
-"swshp": {
-"en": {
-"name": "SWSH Black Star Promos",
-"date": "2019-11-15",
-"serie": "Sword & Shield",
-"total": 307,
-"logo": "https://assets.tcgdex.net/en/swsh/swshp/logo",
-"symbol": "https://assets.tcgdex.net/univ/swsh/swshp/symbol"
-},
-"fr": {
-"name": "Promo SWSH",
-"date": "2019-11-15",
-"serie": "Épée et Bouclier",
-"total": 307,
-"logo": "https://assets.tcgdex.net/fr/swsh/swshp/logo",
-"symbol": "https://assets.tcgdex.net/univ/swsh/swshp/symbol"
+"symbol": null,
+"logo": null
 }
 },
 "base2": {
@@ -549,34 +241,61 @@
 "date": "1999-06-16",
 "serie": "Base",
 "total": 64,
-"logo": "https://assets.tcgdex.net/en/base/base2/logo",
-"symbol": "https://assets.tcgdex.net/univ/base/base2/symbol"
+"abbr": {
+"official": "JU"
+},
+"symbol": "https://assets.tcgdex.net/univ/base/base2/symbol",
+"logo": "https://assets.tcgdex.net/en/base/base2/logo"
 },
 "fr": {
 "name": "Jungle",
 "date": "1999-06-16",
 "serie": "Base",
 "total": 64,
-"logo": "https://assets.tcgdex.net/fr/base/base2/logo",
-"symbol": "https://assets.tcgdex.net/univ/base/base2/symbol"
+"abbr": {
+"official": "JU",
+"localized": "JUN"
+},
+"symbol": "https://assets.tcgdex.net/univ/base/base2/symbol",
+"logo": "https://assets.tcgdex.net/fr/base/base2/logo"
 }
 },
-"pl2": {
+"base4": {
 "en": {
-"name": "Rising Rivals",
-"date": "2009-05-16",
-"serie": "Platinum",
-"total": 111,
-"logo": "https://assets.tcgdex.net/en/pl/pl2/logo",
-"symbol": "https://assets.tcgdex.net/univ/pl/pl2/symbol"
+"name": "Base Set 2",
+"date": "2000-02-24",
+"serie": "Base",
+"total": 130,
+"abbr": {
+"official": "B2"
+},
+"symbol": "https://assets.tcgdex.net/univ/base/base4/symbol",
+"logo": "https://assets.tcgdex.net/en/base/base4/logo"
+}
+},
+"base5": {
+"en": {
+"name": "Team Rocket",
+"date": "2000-04-24",
+"serie": "Base",
+"total": 82,
+"abbr": {
+"official": "RO"
+},
+"symbol": "https://assets.tcgdex.net/univ/base/base5/symbol",
+"logo": "https://assets.tcgdex.net/en/base/base5/logo"
 },
 "fr": {
-"name": "Rivaux Émergeants",
-"date": "2009-05-16",
-"serie": "Platine",
-"total": 111,
-"logo": "https://assets.tcgdex.net/fr/pl/pl2/logo",
-"symbol": "https://assets.tcgdex.net/univ/pl/pl2/symbol"
+"name": "Team Rocket",
+"date": "2000-04-24",
+"serie": "Base",
+"total": 82,
+"abbr": {
+"official": "RO",
+"localized": "ROC"
+},
+"symbol": "https://assets.tcgdex.net/univ/base/base5/symbol",
+"logo": "https://assets.tcgdex.net/fr/base/base5/logo"
 }
 },
 "basep": {
@@ -585,16 +304,1200 @@
 "date": "1999-07-01",
 "serie": "Base",
 "total": 53,
-"logo": "https://assets.tcgdex.net/en/base/basep/logo",
-"symbol": "https://assets.tcgdex.net/univ/base/basep/symbol"
+"abbr": null,
+"symbol": "https://assets.tcgdex.net/univ/base/basep/symbol",
+"logo": "https://assets.tcgdex.net/en/base/basep/logo"
 },
 "fr": {
 "name": "Wizards Black Star Promos",
 "date": "1999-07-01",
 "serie": "Base",
 "total": 53,
-"logo": null,
-"symbol": "https://assets.tcgdex.net/univ/base/basep/symbol"
+"abbr": null,
+"symbol": "https://assets.tcgdex.net/univ/base/basep/symbol",
+"logo": null
+}
+},
+"bw11": {
+"en": {
+"name": "Legendary Treasures",
+"date": "2013-11-06",
+"serie": "Black & White",
+"total": 113,
+"abbr": {
+"official": "LTR"
+},
+"symbol": "https://assets.tcgdex.net/univ/bw/bw11/symbol",
+"logo": "https://assets.tcgdex.net/en/bw/bw11/logo"
+}
+},
+"bw6": {
+"en": {
+"name": "Dragons Exalted",
+"date": "2012-08-15",
+"serie": "Black & White",
+"total": 124,
+"abbr": {
+"official": "DRX"
+},
+"symbol": "https://assets.tcgdex.net/univ/bw/bw6/symbol",
+"logo": "https://assets.tcgdex.net/en/bw/bw6/logo"
+},
+"fr": {
+"name": "Dragons Éxaltés",
+"date": "2012-08-15",
+"serie": "Noir & Blanc",
+"total": 124,
+"abbr": {
+"official": "DRX",
+"localized": "DEX"
+},
+"symbol": "https://assets.tcgdex.net/univ/bw/bw6/symbol",
+"logo": "https://assets.tcgdex.net/fr/bw/bw6/logo"
+}
+},
+"bwp": {
+"en": {
+"name": "BW Black Star Promos",
+"date": "2011-04-26",
+"serie": "Black & White",
+"total": 101,
+"abbr": {
+"official": "BWP"
+},
+"symbol": "https://assets.tcgdex.net/univ/bw/bwp/symbol",
+"logo": "https://assets.tcgdex.net/en/bw/bwp/logo"
+},
+"fr": {
+"name": "Promo BW",
+"date": "2011-04-26",
+"serie": "Noir & Blanc",
+"total": 101,
+"abbr": {
+"official": "BWP",
+"localized": "PBW"
+},
+"symbol": "https://assets.tcgdex.net/univ/bw/bwp/symbol",
+"logo": null
+}
+},
+"col1": {
+"en": {
+"name": "Call of Legends",
+"date": "2011-02-09",
+"serie": "Call of Legends",
+"total": 95,
+"abbr": {
+"official": "COL"
+},
+"symbol": "https://assets.tcgdex.net/univ/col/col1/symbol",
+"logo": "https://assets.tcgdex.net/en/col/col1/logo"
+},
+"fr": {
+"name": "L'appel des Légendes",
+"date": "2011-02-09",
+"serie": "L'appel des Légendes",
+"total": 95,
+"abbr": {
+"official": "COL",
+"localized": "LDL"
+},
+"symbol": "https://assets.tcgdex.net/univ/col/col1/symbol",
+"logo": "https://assets.tcgdex.net/fr/col/col1/logo"
+}
+},
+"dp1": {
+"en": {
+"name": "Diamond & Pearl",
+"date": "2007-05-01",
+"serie": "Diamond & Pearl",
+"total": 130,
+"abbr": {
+"official": "DP"
+},
+"symbol": "https://assets.tcgdex.net/univ/dp/dp1/symbol",
+"logo": "https://assets.tcgdex.net/en/dp/dp1/logo"
+},
+"fr": {
+"name": "Diamant & Perle",
+"date": "2007-05-01",
+"serie": "Diamant & Perle",
+"total": 130,
+"abbr": {
+"official": "DP",
+"localized": "D&P"
+},
+"symbol": "https://assets.tcgdex.net/univ/dp/dp1/symbol",
+"logo": "https://assets.tcgdex.net/fr/dp/dp1/logo"
+}
+},
+"dp2": {
+"en": {
+"name": "Mysterious Treasures",
+"date": "2007-08-01",
+"serie": "Diamond & Pearl",
+"total": 123,
+"abbr": {
+"official": "MT"
+},
+"symbol": "https://assets.tcgdex.net/univ/dp/dp2/symbol",
+"logo": "https://assets.tcgdex.net/en/dp/dp2/logo"
+},
+"fr": {
+"name": "Trésors Mystérieux",
+"date": "2007-08-01",
+"serie": "Diamant & Perle",
+"total": 123,
+"abbr": {
+"official": "MT",
+"localized": "TMY"
+},
+"symbol": "https://assets.tcgdex.net/univ/dp/dp2/symbol",
+"logo": "https://assets.tcgdex.net/fr/dp/dp2/logo"
+}
+},
+"dp7": {
+"en": {
+"name": "Stormfront",
+"date": "2008-11-01",
+"serie": "Diamond & Pearl",
+"total": 100,
+"abbr": {
+"official": "SF"
+},
+"symbol": "https://assets.tcgdex.net/univ/dp/dp7/symbol",
+"logo": "https://assets.tcgdex.net/en/dp/dp7/logo"
+},
+"fr": {
+"name": "Tempête",
+"date": "2008-11-01",
+"serie": "Diamant & Perle",
+"total": 100,
+"abbr": {
+"official": "SF",
+"localized": "TEM"
+},
+"symbol": "https://assets.tcgdex.net/univ/dp/dp7/symbol",
+"logo": "https://assets.tcgdex.net/fr/dp/dp7/logo"
+}
+},
+"ecard1": {
+"en": {
+"name": "Expedition Base Set",
+"date": "2002-09-15",
+"serie": "E-Card",
+"total": 165,
+"abbr": {
+"official": "EX"
+},
+"symbol": "https://assets.tcgdex.net/univ/ecard/ecard1/symbol",
+"logo": "https://assets.tcgdex.net/en/ecard/ecard1/logo"
+},
+"fr": {
+"name": "Expedition",
+"date": "2002-09-15",
+"serie": "e-cards",
+"total": 165,
+"abbr": {
+"official": "EX",
+"localized": "EXP"
+},
+"symbol": "https://assets.tcgdex.net/univ/ecard/ecard1/symbol",
+"logo": "https://assets.tcgdex.net/fr/ecard/ecard1/logo"
+}
+},
+"ecard2": {
+"en": {
+"name": "Aquapolis",
+"date": "2003-01-15",
+"serie": "E-Card",
+"total": 147,
+"abbr": {
+"official": "AQ"
+},
+"symbol": "https://assets.tcgdex.net/univ/ecard/ecard2/symbol",
+"logo": "https://assets.tcgdex.net/en/ecard/ecard2/logo"
+},
+"fr": {
+"name": "Aquapolis",
+"date": "2003-01-15",
+"serie": "e-cards",
+"total": 147,
+"abbr": {
+"official": "AQ",
+"localized": "AQU"
+},
+"symbol": "https://assets.tcgdex.net/univ/ecard/ecard2/symbol",
+"logo": "https://assets.tcgdex.net/fr/ecard/ecard2/logo"
+}
+},
+"ex11": {
+"en": {
+"name": "Delta Species",
+"date": "2005-10-31",
+"serie": "EX",
+"total": 113,
+"abbr": {
+"official": "DS"
+},
+"symbol": "https://assets.tcgdex.net/univ/ex/ex11/symbol",
+"logo": "https://assets.tcgdex.net/en/ex/ex11/logo"
+},
+"fr": {
+"name": "EX Espèces Delta",
+"date": "2005-10-31",
+"serie": "EX",
+"total": 113,
+"abbr": {
+"official": "DS",
+"localized": "ESD"
+},
+"symbol": "https://assets.tcgdex.net/univ/ex/ex11/symbol",
+"logo": "https://assets.tcgdex.net/fr/ex/ex11/logo"
+}
+},
+"ex15": {
+"en": {
+"name": "Dragon Frontiers",
+"date": "2006-11-08",
+"serie": "EX",
+"total": 101,
+"abbr": {
+"official": "DF"
+},
+"symbol": "https://assets.tcgdex.net/univ/ex/ex15/symbol",
+"logo": "https://assets.tcgdex.net/en/ex/ex15/logo"
+},
+"fr": {
+"name": "EX Île des Dragons",
+"date": "2006-11-08",
+"serie": "EX",
+"total": 101,
+"abbr": {
+"official": "DF",
+"localized": "IDR"
+},
+"symbol": "https://assets.tcgdex.net/univ/ex/ex15/symbol",
+"logo": "https://assets.tcgdex.net/fr/ex/ex15/logo"
+}
+},
+"ex16": {
+"en": {
+"name": "Power Keepers",
+"date": "2007-02-17",
+"serie": "EX",
+"total": 108,
+"abbr": {
+"official": "PK"
+},
+"symbol": "https://assets.tcgdex.net/univ/ex/ex16/symbol",
+"logo": "https://assets.tcgdex.net/en/ex/ex16/logo"
+},
+"fr": {
+"name": "EX Gardiens du Pouvoir",
+"date": "2007-02-17",
+"serie": "EX",
+"total": 108,
+"abbr": {
+"official": "PK",
+"localized": "GDP"
+},
+"symbol": "https://assets.tcgdex.net/univ/ex/ex16/symbol",
+"logo": "https://assets.tcgdex.net/fr/ex/ex16/logo"
+}
+},
+"ex5": {
+"en": {
+"name": "Hidden Legends",
+"date": "2004-06-01",
+"serie": "EX",
+"total": 101,
+"abbr": {
+"official": "HL"
+},
+"symbol": "https://assets.tcgdex.net/univ/ex/ex5/symbol",
+"logo": "https://assets.tcgdex.net/en/ex/ex5/logo"
+},
+"fr": {
+"name": "EX Légendes Oubliées",
+"date": "2004-06-01",
+"serie": "EX",
+"total": 101,
+"abbr": {
+"official": "HL",
+"localized": "LOU"
+},
+"symbol": "https://assets.tcgdex.net/univ/ex/ex5/symbol",
+"logo": "https://assets.tcgdex.net/fr/ex/ex5/logo"
+}
+},
+"ex6": {
+"en": {
+"name": "FireRed & LeafGreen",
+"date": "2004-09-01",
+"serie": "EX",
+"total": 112,
+"abbr": {
+"official": "RG"
+},
+"symbol": "https://assets.tcgdex.net/univ/ex/ex6/symbol",
+"logo": "https://assets.tcgdex.net/en/ex/ex6/logo"
+},
+"fr": {
+"name": "EX Rouge Feu & Vert Feuille",
+"date": "2004-09-01",
+"serie": "EX",
+"total": 112,
+"abbr": {
+"official": "RG",
+"localized": "RFV"
+},
+"symbol": "https://assets.tcgdex.net/univ/ex/ex6/symbol",
+"logo": "https://assets.tcgdex.net/fr/ex/ex6/logo"
+}
+},
+"ex9": {
+"en": {
+"name": "Emerald",
+"date": "2005-05-09",
+"serie": "EX",
+"total": 106,
+"abbr": {
+"official": "EM"
+},
+"symbol": "https://assets.tcgdex.net/univ/ex/ex9/symbol",
+"logo": "https://assets.tcgdex.net/en/ex/ex9/logo"
+},
+"fr": {
+"name": "EX Émeraude",
+"date": "2005-05-09",
+"serie": "EX",
+"total": 106,
+"abbr": {
+"official": "EM",
+"localized": "EME"
+},
+"symbol": "https://assets.tcgdex.net/univ/ex/ex9/symbol",
+"logo": "https://assets.tcgdex.net/fr/ex/ex9/logo"
+}
+},
+"g1": {
+"en": {
+"name": "Generations",
+"date": "2016-02-22",
+"serie": "XY",
+"total": 83,
+"abbr": {
+"official": "GEN"
+},
+"symbol": "https://assets.tcgdex.net/univ/xy/g1/symbol",
+"logo": "https://assets.tcgdex.net/en/xy/g1/logo"
+},
+"fr": {
+"name": "Générations",
+"date": "2016-02-22",
+"serie": "XY",
+"total": 83,
+"abbr": {
+"official": "GEN",
+"localized": "GEN"
+},
+"symbol": "https://assets.tcgdex.net/univ/xy/g1/symbol",
+"logo": "https://assets.tcgdex.net/fr/xy/g1/logo"
+}
+},
+"gym1": {
+"en": {
+"name": "Gym Heroes",
+"date": "2000-08-14",
+"serie": "Gym",
+"total": 132,
+"abbr": {
+"official": "G1"
+},
+"symbol": "https://assets.tcgdex.net/univ/gym/gym1/symbol",
+"logo": "https://assets.tcgdex.net/en/gym/gym1/logo"
+}
+},
+"gym2": {
+"en": {
+"name": "Gym Challenge",
+"date": "2000-10-16",
+"serie": "Gym",
+"total": 132,
+"abbr": {
+"official": "G2"
+},
+"symbol": "https://assets.tcgdex.net/univ/gym/gym2/symbol",
+"logo": "https://assets.tcgdex.net/en/gym/gym2/logo"
+}
+},
+"hgss1": {
+"en": {
+"name": "HeartGold SoulSilver",
+"date": "2010-02-10",
+"serie": "HeartGold & SoulSilver",
+"total": 123,
+"abbr": {
+"official": "HS"
+},
+"symbol": "https://assets.tcgdex.net/univ/hgss/hgss1/symbol",
+"logo": "https://assets.tcgdex.net/en/hgss/hgss1/logo"
+},
+"fr": {
+"name": "HeartGold SoulSilver",
+"date": "2010-02-10",
+"serie": "HeartGold SoulSilver",
+"total": 123,
+"abbr": {
+"official": "HS",
+"localized": "HGS"
+},
+"symbol": "https://assets.tcgdex.net/univ/hgss/hgss1/symbol",
+"logo": "https://assets.tcgdex.net/fr/hgss/hgss1/logo"
+}
+},
+"hgss2": {
+"en": {
+"name": "Unleashed",
+"date": "2010-05-12",
+"serie": "HeartGold & SoulSilver",
+"total": 95,
+"abbr": {
+"official": "UL"
+},
+"symbol": "https://assets.tcgdex.net/univ/hgss/hgss2/symbol",
+"logo": "https://assets.tcgdex.net/en/hgss/hgss2/logo"
+},
+"fr": {
+"name": "Déchaînement",
+"date": "2010-05-12",
+"serie": "HeartGold SoulSilver",
+"total": 95,
+"abbr": {
+"official": "UL",
+"localized": "DCH"
+},
+"symbol": "https://assets.tcgdex.net/univ/hgss/hgss2/symbol",
+"logo": "https://assets.tcgdex.net/fr/hgss/hgss2/logo"
+}
+},
+"hgss4": {
+"en": {
+"name": "Triumphant",
+"date": "2010-11-03",
+"serie": "HeartGold & SoulSilver",
+"total": 102,
+"abbr": {
+"official": "TRI"
+},
+"symbol": "https://assets.tcgdex.net/univ/hgss/hgss4/symbol",
+"logo": "https://assets.tcgdex.net/en/hgss/hgss4/logo"
+},
+"fr": {
+"name": "Triomphant",
+"date": "2010-11-03",
+"serie": "HeartGold SoulSilver",
+"total": 102,
+"abbr": {
+"official": "TRI",
+"localized": "TRI"
+},
+"symbol": "https://assets.tcgdex.net/univ/hgss/hgss4/symbol",
+"logo": "https://assets.tcgdex.net/fr/hgss/hgss4/logo"
+}
+},
+"lc": {
+"en": {
+"name": "Legendary Collection",
+"date": "2002-05-24",
+"serie": "Legendary Collection",
+"total": 110,
+"abbr": {
+"official": "LC"
+},
+"symbol": "https://assets.tcgdex.net/univ/lc/lc/symbol",
+"logo": "https://assets.tcgdex.net/en/lc/lc/logo"
+}
+},
+"me01": {
+"en": {
+"name": "Mega Evolution",
+"date": "2025-09-26",
+"serie": "Mega Evolution",
+"total": 132,
+"abbr": {
+"official": "MEG"
+},
+"symbol": "https://assets.tcgdex.net/univ/me/me01/symbol",
+"logo": "https://assets.tcgdex.net/en/me/me01/logo"
+},
+"fr": {
+"name": "Méga-Évolution",
+"date": "2025-09-26",
+"serie": "Méga-Évolution",
+"total": 132,
+"abbr": {
+"official": "MEG"
+},
+"symbol": "https://assets.tcgdex.net/univ/me/me01/symbol",
+"logo": "https://assets.tcgdex.net/fr/me/me01/logo"
+}
+},
+"me04": {
+"en": {
+"name": "Chaos Rising",
+"date": "2026-05-22",
+"serie": "Mega Evolution",
+"total": 86,
+"abbr": {
+"official": "CRI"
+},
+"symbol": "https://assets.tcgdex.net/univ/me/me04/symbol",
+"logo": "https://assets.tcgdex.net/en/me/me04/logo"
+},
+"fr": {
+"name": "Chaos Ascendant",
+"date": "2026-05-22",
+"serie": "Méga-Évolution",
+"total": 86,
+"abbr": {
+"official": "CRI"
+},
+"symbol": "https://assets.tcgdex.net/univ/me/me04/symbol",
+"logo": "https://assets.tcgdex.net/fr/me/me04/logo"
+}
+},
+"mfb": {
+"en": {
+"name": "My First Battle",
+"date": "2023-09-29",
+"serie": "Scarlet & Violet",
+"total": 48,
+"abbr": {
+"official": "MFB"
+},
+"symbol": null,
+"logo": null
+}
+},
+"neo4": {
+"en": {
+"name": "Neo Destiny",
+"date": "2002-02-28",
+"serie": "Neo",
+"total": 105,
+"abbr": {
+"official": "N4"
+},
+"symbol": "https://assets.tcgdex.net/univ/neo/neo4/symbol",
+"logo": "https://assets.tcgdex.net/en/neo/neo4/logo"
+},
+"fr": {
+"name": "Neo Destiny",
+"date": "2002-02-28",
+"serie": "Neo",
+"total": 105,
+"abbr": {
+"official": "N4",
+"localized": "NDT"
+},
+"symbol": "https://assets.tcgdex.net/univ/neo/neo4/symbol",
+"logo": "https://assets.tcgdex.net/fr/neo/neo4/logo"
+}
+},
+"pl1": {
+"en": {
+"name": "Platinum",
+"date": "2009-02-11",
+"serie": "Platinum",
+"total": 127,
+"abbr": {
+"official": "PL"
+},
+"symbol": "https://assets.tcgdex.net/univ/pl/pl1/symbol",
+"logo": "https://assets.tcgdex.net/en/pl/pl1/logo"
+},
+"fr": {
+"name": "Platine",
+"date": "2009-02-11",
+"serie": "Platine",
+"total": 127,
+"abbr": {
+"official": "PL",
+"localized": "PLA"
+},
+"symbol": "https://assets.tcgdex.net/univ/pl/pl1/symbol",
+"logo": "https://assets.tcgdex.net/fr/pl/pl1/logo"
+}
+},
+"pl2": {
+"en": {
+"name": "Rising Rivals",
+"date": "2009-05-16",
+"serie": "Platinum",
+"total": 111,
+"abbr": {
+"official": "RR"
+},
+"symbol": "https://assets.tcgdex.net/univ/pl/pl2/symbol",
+"logo": "https://assets.tcgdex.net/en/pl/pl2/logo"
+},
+"fr": {
+"name": "Rivaux Émergeants",
+"date": "2009-05-16",
+"serie": "Platine",
+"total": 111,
+"abbr": {
+"official": "RR",
+"localized": "REM"
+},
+"symbol": "https://assets.tcgdex.net/univ/pl/pl2/symbol",
+"logo": "https://assets.tcgdex.net/fr/pl/pl2/logo"
+}
+},
+"pl4": {
+"en": {
+"name": "Arceus",
+"date": "2009-11-04",
+"serie": "Platinum",
+"total": 99,
+"abbr": {
+"official": "AR"
+},
+"symbol": "https://assets.tcgdex.net/univ/pl/pl4/symbol",
+"logo": "https://assets.tcgdex.net/en/pl/pl4/logo"
+}
+},
+"ru1": {
+"en": {
+"name": "Pokémon Rumble",
+"date": "2009-12-02",
+"serie": "Platinum",
+"total": 16,
+"abbr": {
+"official": "RM"
+},
+"symbol": "https://assets.tcgdex.net/univ/pl/ru1/symbol",
+"logo": "https://assets.tcgdex.net/en/pl/ru1/logo"
+}
+},
+"sm12": {
+"en": {
+"name": "Cosmic Eclipse",
+"date": "2019-11-01",
+"serie": "Sun & Moon",
+"total": 236,
+"abbr": {
+"official": "CEC"
+},
+"symbol": "https://assets.tcgdex.net/univ/sm/sm12/symbol",
+"logo": "https://assets.tcgdex.net/en/sm/sm12/logo"
+},
+"fr": {
+"name": "Éclipse Cosmique",
+"date": "2019-11-01",
+"serie": "Soleil et Lune",
+"total": 236,
+"abbr": {
+"official": "CEC",
+"localized": "ECO"
+},
+"symbol": "https://assets.tcgdex.net/univ/sm/sm12/symbol",
+"logo": "https://assets.tcgdex.net/fr/sm/sm12/logo"
+}
+},
+"sm2": {
+"en": {
+"name": "Guardians Rising",
+"date": "2017-05-05",
+"serie": "Sun & Moon",
+"total": 145,
+"abbr": {
+"official": "GRI"
+},
+"symbol": "https://assets.tcgdex.net/univ/sm/sm2/symbol",
+"logo": "https://assets.tcgdex.net/en/sm/sm2/logo"
+},
+"fr": {
+"name": "Gardiens Ascendants",
+"date": "2017-05-05",
+"serie": "Soleil et Lune",
+"total": 145,
+"abbr": {
+"official": "GRI",
+"localized": "GAS"
+},
+"symbol": "https://assets.tcgdex.net/univ/sm/sm2/symbol",
+"logo": "https://assets.tcgdex.net/fr/sm/sm2/logo"
+}
+},
+"sm3": {
+"en": {
+"name": "Burning Shadows",
+"date": "2017-08-04",
+"serie": "Sun & Moon",
+"total": 147,
+"abbr": {
+"official": "BUS"
+},
+"symbol": "https://assets.tcgdex.net/univ/sm/sm3/symbol",
+"logo": "https://assets.tcgdex.net/en/sm/sm3/logo"
+},
+"fr": {
+"name": "Ombres Ardentes",
+"date": "2017-08-04",
+"serie": "Soleil et Lune",
+"total": 147,
+"abbr": {
+"official": "BUS",
+"localized": "OAR"
+},
+"symbol": "https://assets.tcgdex.net/univ/sm/sm3/symbol",
+"logo": "https://assets.tcgdex.net/fr/sm/sm3/logo"
+}
+},
+"sm5": {
+"en": {
+"name": "Ultra Prism",
+"date": "2018-02-02",
+"serie": "Sun & Moon",
+"total": 156,
+"abbr": {
+"official": "UPR"
+},
+"symbol": "https://assets.tcgdex.net/univ/sm/sm5/symbol",
+"logo": "https://assets.tcgdex.net/en/sm/sm5/logo"
+},
+"fr": {
+"name": "Ultra-Prisme",
+"date": "2018-02-02",
+"serie": "Soleil et Lune",
+"total": 156,
+"abbr": {
+"official": "UPR",
+"localized": "UPR"
+},
+"symbol": "https://assets.tcgdex.net/univ/sm/sm5/symbol",
+"logo": "https://assets.tcgdex.net/fr/sm/sm5/logo"
+}
+},
+"sm8": {
+"en": {
+"name": "Lost Thunder",
+"date": "2018-11-02",
+"serie": "Sun & Moon",
+"total": 214,
+"abbr": {
+"official": "LOT"
+},
+"symbol": "https://assets.tcgdex.net/univ/sm/sm8/symbol",
+"logo": "https://assets.tcgdex.net/en/sm/sm8/logo"
+},
+"fr": {
+"name": "Tonnerre Perdu",
+"date": "2018-11-02",
+"serie": "Soleil et Lune",
+"total": 214,
+"abbr": {
+"official": "LOT",
+"localized": "TPD"
+},
+"symbol": "https://assets.tcgdex.net/univ/sm/sm8/symbol",
+"logo": "https://assets.tcgdex.net/fr/sm/sm8/logo"
+}
+},
+"sm9": {
+"en": {
+"name": "Team Up",
+"date": "2019-01-31",
+"serie": "Sun & Moon",
+"total": 181,
+"abbr": {
+"official": "TEU"
+},
+"symbol": "https://assets.tcgdex.net/univ/sm/sm9/symbol",
+"logo": "https://assets.tcgdex.net/en/sm/sm9/logo"
+},
+"fr": {
+"name": "Duo de Choc",
+"date": "2019-01-31",
+"serie": "Soleil et Lune",
+"total": 181,
+"abbr": {
+"official": "TEU",
+"localized": "DDC"
+},
+"symbol": "https://assets.tcgdex.net/univ/sm/sm9/symbol",
+"logo": "https://assets.tcgdex.net/fr/sm/sm9/logo"
+}
+},
+"sma": {
+"en": {
+"name": "Hidden Fates Shiny Vault",
+"date": "2019-08-23",
+"serie": "Sun & Moon",
+"total": 94,
+"abbr": null,
+"symbol": "https://assets.tcgdex.net/univ/sm/sma/symbol",
+"logo": null
+},
+"fr": {
+"name": "Destinées Occultes Coffre Étincelant",
+"date": "2019-08-23",
+"serie": "Soleil et Lune",
+"total": 94,
+"abbr": null,
+"symbol": "https://assets.tcgdex.net/univ/sm/sma/symbol",
+"logo": null
+}
+},
+"smp": {
+"en": {
+"name": "SM Black Star Promos",
+"date": "2017-02-03",
+"serie": "Sun & Moon",
+"total": 248,
+"abbr": {
+"official": "SMP"
+},
+"symbol": "https://assets.tcgdex.net/univ/sm/smp/symbol",
+"logo": "https://assets.tcgdex.net/en/sm/smp/logo"
+},
+"fr": {
+"name": "Promo SM",
+"date": "2017-02-03",
+"serie": "Soleil et Lune",
+"total": 248,
+"abbr": {
+"official": "SMP",
+"localized": "PSM"
+},
+"symbol": "https://assets.tcgdex.net/univ/sm/smp/symbol",
+"logo": null
+}
+},
+"sv03": {
+"en": {
+"name": "Obsidian Flames",
+"date": "2023-08-11",
+"serie": "Scarlet & Violet",
+"total": 197,
+"abbr": {
+"official": "OBF"
+},
+"symbol": "https://assets.tcgdex.net/univ/sv/sv03/symbol",
+"logo": "https://assets.tcgdex.net/en/sv/sv03/logo"
+},
+"fr": {
+"name": "Flammes Obsidiennes",
+"date": "2023-08-11",
+"serie": "Écarlate et Violet",
+"total": 197,
+"abbr": {
+"official": "OBF",
+"localized": "FLO"
+},
+"symbol": "https://assets.tcgdex.net/univ/sv/sv03/symbol",
+"logo": "https://assets.tcgdex.net/fr/sv/sv03/logo"
+}
+},
+"sv03.5": {
+"en": {
+"name": "151",
+"date": "2023-09-22",
+"serie": "Scarlet & Violet",
+"total": 165,
+"abbr": {
+"official": "MEW"
+},
+"symbol": "https://assets.tcgdex.net/univ/sv/sv03.5/symbol",
+"logo": "https://assets.tcgdex.net/en/sv/sv03.5/logo"
+},
+"fr": {
+"name": "151",
+"date": "2023-09-22",
+"serie": "Écarlate et Violet",
+"total": 165,
+"abbr": {
+"official": "MEW",
+"localized": "151"
+},
+"symbol": "https://assets.tcgdex.net/univ/sv/sv03.5/symbol",
+"logo": "https://assets.tcgdex.net/fr/sv/sv03.5/logo"
+}
+},
+"sv05": {
+"en": {
+"name": "Temporal Forces",
+"date": "2024-03-22",
+"serie": "Scarlet & Violet",
+"total": 162,
+"abbr": {
+"official": "TEF"
+},
+"symbol": "https://assets.tcgdex.net/univ/sv/sv05/symbol",
+"logo": null
+},
+"fr": {
+"name": "Forces Temporelles",
+"date": "2024-03-22",
+"serie": "Écarlate et Violet",
+"total": 162,
+"abbr": {
+"official": "TEF",
+"localized": "FTP"
+},
+"symbol": "https://assets.tcgdex.net/univ/sv/sv05/symbol",
+"logo": "https://assets.tcgdex.net/fr/sv/sv05/logo"
+}
+},
+"sv06": {
+"en": {
+"name": "Twilight Masquerade",
+"date": "2024-05-24",
+"serie": "Scarlet & Violet",
+"total": 167,
+"abbr": {
+"official": "TWM"
+},
+"symbol": "https://assets.tcgdex.net/univ/sv/sv06/symbol",
+"logo": "https://assets.tcgdex.net/en/sv/sv06/logo"
+},
+"fr": {
+"name": "Mascarade Crépusculaire",
+"date": "2024-05-24",
+"serie": "Écarlate et Violet",
+"total": 167,
+"abbr": {
+"official": "TWM",
+"localized": "MCR"
+},
+"symbol": "https://assets.tcgdex.net/univ/sv/sv06/symbol",
+"logo": "https://assets.tcgdex.net/fr/sv/sv06/logo"
+}
+},
+"sv07": {
+"en": {
+"name": "Stellar Crown",
+"date": "2024-09-13",
+"serie": "Scarlet & Violet",
+"total": 142,
+"abbr": {
+"official": "SCR"
+},
+"symbol": null,
+"logo": "https://assets.tcgdex.net/en/sv/sv07/logo"
+},
+"fr": {
+"name": "Couronne Stellaire",
+"date": "2024-09-13",
+"serie": "Écarlate et Violet",
+"total": 142,
+"abbr": {
+"official": "SCR"
+},
+"symbol": null,
+"logo": "https://assets.tcgdex.net/fr/sv/sv07/logo"
+}
+},
+"sv08": {
+"en": {
+"name": "Surging Sparks",
+"date": "2024-11-08",
+"serie": "Scarlet & Violet",
+"total": 191,
+"abbr": {
+"official": "SSP"
+},
+"symbol": null,
+"logo": "https://assets.tcgdex.net/en/sv/sv08/logo"
+},
+"fr": {
+"name": "Étincelles Déferlantes",
+"date": "2024-11-08",
+"serie": "Écarlate et Violet",
+"total": 191,
+"abbr": {
+"official": "SSP",
+"localized": "ETD"
+},
+"symbol": null,
+"logo": "https://assets.tcgdex.net/fr/sv/sv08/logo"
+}
+},
+"sv10": {
+"en": {
+"name": "Destined Rivals",
+"date": "2025-05-30",
+"serie": "Scarlet & Violet",
+"total": 182,
+"abbr": {
+"official": "DRI"
+},
+"symbol": "https://assets.tcgdex.net/univ/sv/sv10/symbol",
+"logo": "https://assets.tcgdex.net/en/sv/sv10/logo"
+},
+"fr": {
+"name": "Rivalités Destinées",
+"date": "2025-05-30",
+"serie": "Écarlate et Violet",
+"total": 182,
+"abbr": {
+"official": "DRI",
+"localized": "RVD"
+},
+"symbol": "https://assets.tcgdex.net/univ/sv/sv10/symbol",
+"logo": "https://assets.tcgdex.net/fr/sv/sv10/logo"
+}
+},
+"swsh1": {
+"en": {
+"name": "Sword & Shield",
+"date": "2020-02-07",
+"serie": "Sword & Shield",
+"total": 202,
+"abbr": {
+"official": "SSH"
+},
+"symbol": "https://assets.tcgdex.net/univ/swsh/swsh1/symbol",
+"logo": "https://assets.tcgdex.net/en/swsh/swsh1/logo"
+},
+"fr": {
+"name": "Épée et Bouclier",
+"date": "2020-02-07",
+"serie": "Épée et Bouclier",
+"total": 202,
+"abbr": {
+"official": "SSH",
+"localized": "E&B"
+},
+"symbol": "https://assets.tcgdex.net/univ/swsh/swsh1/symbol",
+"logo": "https://assets.tcgdex.net/fr/swsh/swsh1/logo"
+}
+},
+"swsh10": {
+"en": {
+"name": "Astral Radiance",
+"date": "2022-05-27",
+"serie": "Sword & Shield",
+"total": 189,
+"abbr": {
+"official": "ASR"
+},
+"symbol": "https://assets.tcgdex.net/univ/swsh/swsh10/symbol",
+"logo": "https://assets.tcgdex.net/en/swsh/swsh10/logo"
+},
+"fr": {
+"name": "Astres Radieux",
+"date": "2022-05-27",
+"serie": "Épée et Bouclier",
+"total": 189,
+"abbr": {
+"official": "ASR",
+"localized": "ASR"
+},
+"symbol": "https://assets.tcgdex.net/univ/swsh/swsh10/symbol",
+"logo": "https://assets.tcgdex.net/fr/swsh/swsh10/logo"
+}
+},
+"swsh12": {
+"en": {
+"name": "Silver Tempest",
+"date": "2022-11-11",
+"serie": "Sword & Shield",
+"total": 195,
+"abbr": {
+"official": "SIT"
+},
+"symbol": "https://assets.tcgdex.net/univ/swsh/swsh12/symbol",
+"logo": "https://assets.tcgdex.net/en/swsh/swsh12/logo"
+},
+"fr": {
+"name": "Tempête Argentée",
+"date": "2022-11-11",
+"serie": "Épée et Bouclier",
+"total": 195,
+"abbr": {
+"official": "SIT",
+"localized": "TAR"
+},
+"symbol": "https://assets.tcgdex.net/univ/swsh/swsh12/symbol",
+"logo": "https://assets.tcgdex.net/fr/swsh/swsh12/logo"
+}
+},
+"swsh2": {
+"en": {
+"name": "Rebel Clash",
+"date": "2020-05-01",
+"serie": "Sword & Shield",
+"total": 192,
+"abbr": {
+"official": "RCL"
+},
+"symbol": "https://assets.tcgdex.net/univ/swsh/swsh2/symbol",
+"logo": "https://assets.tcgdex.net/en/swsh/swsh2/logo"
+},
+"fr": {
+"name": "Clash des Rebelles",
+"date": "2020-05-01",
+"serie": "Épée et Bouclier",
+"total": 192,
+"abbr": {
+"official": "RCL",
+"localized": "CDR"
+},
+"symbol": "https://assets.tcgdex.net/univ/swsh/swsh2/symbol",
+"logo": "https://assets.tcgdex.net/fr/swsh/swsh2/logo"
+}
+},
+"swsh3.5": {
+"en": {
+"name": "Champion's Path",
+"date": "2020-09-25",
+"serie": "Sword & Shield",
+"total": 73,
+"abbr": {
+"official": "CPA"
+},
+"symbol": "https://assets.tcgdex.net/univ/swsh/swsh3.5/symbol",
+"logo": "https://assets.tcgdex.net/en/swsh/swsh3.5/logo"
+},
+"fr": {
+"name": "La Voie du Maître",
+"date": "2020-09-25",
+"serie": "Épée et Bouclier",
+"total": 73,
+"abbr": {
+"official": "CPA",
+"localized": "VDM"
+},
+"symbol": "https://assets.tcgdex.net/univ/swsh/swsh3.5/symbol",
+"logo": "https://assets.tcgdex.net/fr/swsh/swsh3.5/logo"
+}
+},
+"swsh4.5sv": {
+"en": {
+"name": "Shining Fates Shiny Vault",
+"date": "2021-02-19",
+"serie": "Sword & Shield",
+"total": 122,
+"abbr": {
+"official": "SHF:SV"
+},
+"symbol": null,
+"logo": null
+},
+"fr": {
+"name": "Destinées Radieuses Coffre Étincelant",
+"date": "2021-02-19",
+"serie": "Épée et Bouclier",
+"total": 122,
+"abbr": {
+"official": "SHF:SV"
+},
+"symbol": null,
+"logo": null
 }
 },
 "swsh6": {
@@ -603,16 +1506,193 @@
 "date": "2021-06-18",
 "serie": "Sword & Shield",
 "total": 198,
-"logo": "https://assets.tcgdex.net/en/swsh/swsh6/logo",
-"symbol": "https://assets.tcgdex.net/univ/swsh/swsh6/symbol"
+"abbr": {
+"official": "CRE"
+},
+"symbol": "https://assets.tcgdex.net/univ/swsh/swsh6/symbol",
+"logo": "https://assets.tcgdex.net/en/swsh/swsh6/logo"
 },
 "fr": {
 "name": "Règne de Glace",
 "date": "2021-06-18",
 "serie": "Épée et Bouclier",
 "total": 198,
-"logo": "https://assets.tcgdex.net/fr/swsh/swsh6/logo",
-"symbol": "https://assets.tcgdex.net/univ/swsh/swsh6/symbol"
+"abbr": {
+"official": "CRE",
+"localized": "REG"
+},
+"symbol": "https://assets.tcgdex.net/univ/swsh/swsh6/symbol",
+"logo": "https://assets.tcgdex.net/fr/swsh/swsh6/logo"
+}
+},
+"swsh8": {
+"en": {
+"name": "Fusion Strike",
+"date": "2021-11-12",
+"serie": "Sword & Shield",
+"total": 264,
+"abbr": {
+"official": "FST"
+},
+"symbol": "https://assets.tcgdex.net/univ/swsh/swsh8/symbol",
+"logo": "https://assets.tcgdex.net/en/swsh/swsh8/logo"
+},
+"fr": {
+"name": "Poing de Fusion",
+"date": "2021-11-12",
+"serie": "Épée et Bouclier",
+"total": 264,
+"abbr": {
+"official": "FST",
+"localized": "PDF"
+},
+"symbol": "https://assets.tcgdex.net/univ/swsh/swsh8/symbol",
+"logo": "https://assets.tcgdex.net/fr/swsh/swsh8/logo"
+}
+},
+"swshp": {
+"en": {
+"name": "SWSH Black Star Promos",
+"date": "2019-11-15",
+"serie": "Sword & Shield",
+"total": 307,
+"abbr": null,
+"symbol": "https://assets.tcgdex.net/univ/swsh/swshp/symbol",
+"logo": "https://assets.tcgdex.net/en/swsh/swshp/logo"
+},
+"fr": {
+"name": "Promo SWSH",
+"date": "2019-11-15",
+"serie": "Épée et Bouclier",
+"total": 307,
+"abbr": null,
+"symbol": "https://assets.tcgdex.net/univ/swsh/swshp/symbol",
+"logo": "https://assets.tcgdex.net/fr/swsh/swshp/logo"
+}
+},
+"tk-ex-m": {
+"en": {
+"name": "EX trainer Kit 2 (Minun)",
+"date": "2006-03-01",
+"serie": "Trainer kits",
+"total": 12,
+"abbr": {
+"official": "TK2M"
+},
+"symbol": null,
+"logo": null
+},
+"fr": {
+"name": "EX Kit dresseur (Négapi)",
+"date": "2006-03-01",
+"serie": "Kits du dresseur",
+"total": 12,
+"abbr": {
+"official": "TK2M",
+"localized": "NEG"
+},
+"symbol": null,
+"logo": null
+}
+},
+"xy11": {
+"en": {
+"name": "Steam Siege",
+"date": "2016-08-03",
+"serie": "XY",
+"total": 114,
+"abbr": {
+"official": "STS"
+},
+"symbol": "https://assets.tcgdex.net/univ/xy/xy11/symbol",
+"logo": "https://assets.tcgdex.net/en/xy/xy11/logo"
+},
+"fr": {
+"name": "Offensive Vapeur",
+"date": "2016-08-03",
+"serie": "XY",
+"total": 114,
+"abbr": {
+"official": "STS",
+"localized": "OFV"
+},
+"symbol": "https://assets.tcgdex.net/univ/xy/xy11/symbol",
+"logo": "https://assets.tcgdex.net/fr/xy/xy11/logo"
+}
+},
+"xy12": {
+"en": {
+"name": "Evolutions",
+"date": "2016-11-02",
+"serie": "XY",
+"total": 108,
+"abbr": {
+"official": "EVO"
+},
+"symbol": "https://assets.tcgdex.net/univ/xy/xy12/symbol",
+"logo": "https://assets.tcgdex.net/en/xy/xy12/logo"
+},
+"fr": {
+"name": "Évolutions",
+"date": "2016-11-02",
+"serie": "XY",
+"total": 108,
+"abbr": {
+"official": "EVO",
+"localized": "EVO"
+},
+"symbol": "https://assets.tcgdex.net/univ/xy/xy12/symbol",
+"logo": "https://assets.tcgdex.net/fr/xy/xy12/logo"
+}
+},
+"xy2": {
+"en": {
+"name": "Flashfire",
+"date": "2014-05-07",
+"serie": "XY",
+"total": 106,
+"abbr": {
+"official": "FLF"
+},
+"symbol": "https://assets.tcgdex.net/univ/xy/xy2/symbol",
+"logo": "https://assets.tcgdex.net/en/xy/xy2/logo"
+},
+"fr": {
+"name": "Étincelles",
+"date": "2014-05-07",
+"serie": "XY",
+"total": 106,
+"abbr": {
+"official": "FLF",
+"localized": "ETI"
+},
+"symbol": "https://assets.tcgdex.net/univ/xy/xy2/symbol",
+"logo": "https://assets.tcgdex.net/fr/xy/xy2/logo"
+}
+},
+"xy5": {
+"en": {
+"name": "Primal Clash",
+"date": "2015-02-04",
+"serie": "XY",
+"total": 160,
+"abbr": {
+"official": "PRC"
+},
+"symbol": "https://assets.tcgdex.net/univ/xy/xy5/symbol",
+"logo": "https://assets.tcgdex.net/en/xy/xy5/logo"
+},
+"fr": {
+"name": "Primo-Choc",
+"date": "2015-02-04",
+"serie": "XY",
+"total": 160,
+"abbr": {
+"official": "PRC",
+"localized": "PRI"
+},
+"symbol": "https://assets.tcgdex.net/univ/xy/xy5/symbol",
+"logo": "https://assets.tcgdex.net/fr/xy/xy5/logo"
 }
 }
 }
